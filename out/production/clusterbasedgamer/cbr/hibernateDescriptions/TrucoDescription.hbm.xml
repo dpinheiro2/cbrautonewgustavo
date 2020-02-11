@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+	<class name="cbr.cbrDescriptions.TrucoDescription" table="maos">
+
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="idMao" column="idMao"/>
+		<property name="idPartida" column="idPartida"/>
+		<property name="jogadorMao" column="jogadorMao"/>
+		<property name="cartaAltaRobo" column="cartaAltaRobo"/>
+		<property name="cartaMediaRobo" column="cartaMediaRobo"/>
+		<property name="cartaBaixaRobo" column="cartaBaixaRobo"/>
+		<property name="cartaAltaHumano" column="cartaAltaHumano"/>
+		<property name="cartaMediaHumano" column="cartaMediaHumano"/>
+		<property name="cartaBaixaHumano" column="cartaBaixaHumano"/>
+		<property name="primeiraCartaRobo" column="primeiraCartaRobo"/>
+		<property name="primeiraCartaHumano" column="primeiraCartaHumano"/>
+		<property name="segundaCartaRobo" column="segundaCartaRobo"/>
+		<property name="segundaCartaHumano" column="segundaCartaHumano"/>
+		<property name="terceiraCartaRobo" column="terceiraCartaRobo"/>
+		<property name="terceiraCartaHumano" column="terceiraCartaHumano"/>
+		<property name="ganhadorPrimeiraRodada" column="ganhadorPrimeiraRodada"/>
+		<property name="ganhadorSegundaRodada" column="ganhadorSegundaRodada"/>
+		<property name="ganhadorTerceiraRodada" column="ganhadorTerceiraRodada"/>
+		<property name="roboCartaVirada" column="roboCartaVirada"/>
+		<property name="humanoCartaVirada" column="humanoCartaVirada"/>
+		<property name="quemPediuEnvido" column="quemPediuEnvido"/>
+		<property name="quemPediuFaltaEnvido" column="quemPediuFaltaEnvido"/>
+		<property name="quemPediuRealEnvido" column="quemPediuRealEnvido"/>
+		<property name="pontosEnvidoRobo" column="pontosEnvidoRobo"/>
+		<property name="pontosEnvidoHumano" column="pontosEnvidoHumano"/>
+		<property name="quemNegouEnvido" column="quemNegouEnvido"/>
+		<property name="quemGanhouEnvido" column="quemGanhouEnvido"/>
+		<property name="tentosEnvido" column="tentosEnvido"/>
+		<property name="quemFlor" column="quemFlor"/>
+		<property name="quemContraFlor" column="quemContraFlor"/>
+		<property name="quemContraFlorResto" column="quemContraFlorResto"/>
+		<property name="quemNegouFlor" column="quemNegouFlor"/>
+		<property name="pontosFlorRobo" column="pontosFlorRobo"/>
+		<property name="pontosFlorHumano" column="pontosFlorHumano"/>
+		<property name="quemGanhouFlor" column="quemGanhouFlor"/>
+		<property name="tentosFlor" column="tentosFlor"/>
+		<property name="quemEscondeuPontosEnvido" column="quemEscondeuPontosEnvido"/>
+		<property name="quemEscondeuPontosFlor" column="quemEscondeuPontosFlor"/>
+		<property name="quemTruco" column="quemTruco"/>
+		<property name="quandoTruco" column="quandoTruco"/>
+		<property name="quemRetruco" column="quemRetruco"/>
+		<property name="quandoRetruco" column="quandoRetruco"/>
+		<property name="quemValeQuatro" column="quemValeQuatro"/>
+		<property name="quandoValeQuatro" column="quandoValeQuatro"/>
+		<property name="quemNegouTruco" column="quemNegouTruco"/>
+		<property name="quemGanhouTruco" column="quemGanhouTruco"/>
+		<property name="tentosTruco" column="tentosTruco"/>
+		<property name="tentosAnterioresRobo" column="tentosAnterioresRobo"/>
+		<property name="tentosAnterioresHumano" column="tentosAnterioresHumano"/>
+		<property name="tentosPosterioresRobo" column="tentosPosterioresRobo"/>
+		<property name="tentosPosterioresHumano" column="tentosPosterioresHumano"/>
+		<property name="roboMentiuEnvido" column="roboMentiuEnvido"/>
+		<property name="humanoMentiuEnvido" column="humanoMentiuEnvido"/>
+		<property name="roboMentiuFlor" column="roboMentiuFlor"/>
+		<property name="humanoMentiuFlor" column="humanoMentiuFlor"/>
+		<property name="roboMentiuTruco" column="roboMentiuTruco"/>
+		<property name="humanoMentiuTruco" column="humanoMentiuTruco"/>
+		<property name="quemBaralho" column="quemBaralho"/>
+		<property name="quandoBaralho" column="quandoBaralho"/>
+		<property name="quemContraFlorFalta" column="quemContraFlorFalta"/>
+		<property name="quemEnvidoEnvido" column="quemEnvidoEnvido"/>
+		<property name="quemFlorFlor" column="quemFlorFlor"/>
+		<property name="quandoCartaVirada" column="quandoCartaVirada"/>
+		<property name="naipeCartaAltaRobo" column="naipeCartaAltaRobo"/>
+		<property name="naipeCartaMediaRobo" column="naipeCartaMediaRobo"/>
+		<property name="naipeCartaBaixaRobo" column="naipeCartaBaixaRobo"/>
+		<property name="naipeCartaAltaHumano" column="naipeCartaAltaHumano"/>
+		<property name="naipeCartaMediaHumano" column="naipeCartaMediaHumano"/>
+		<property name="naipeCartaBaixaHumano" column="naipeCartaBaixaHumano"/>
+		<property name="naipePrimeiraCartaRobo" column="naipePrimeiraCartaRobo"/>
+		<property name="naipePrimeiraCartaHumano" column="naipePrimeiraCartaHumano"/>
+		<property name="naipeSegundaCartaRobo" column="naipeSegundaCartaRobo"/>
+		<property name="naipeSegundaCartaHumano" column="naipeSegundaCartaHumano"/>
+		<property name="naipeTerceiraCartaRobo" column="naipeTerceiraCartaRobo"/>
+		<property name="naipeTerceiraCartaHumano" column="naipeTerceiraCartaHumano"/>
+
+		<property name="ganhadorMao" column="ganhadorMao"/>
+
+
+		<property name="cartaAltaRoboClustering" column="cartaAltaRoboClustering"/>
+		<property name="cartaMediaRoboClustering" column="cartaMediaRoboClustering"/>
+		<property name="cartaBaixaRoboClustering" column="cartaBaixaRoboClustering"/>
+
+
+		<property name="primeiraCartaHumanoClustering" column="primeiraCartaHumanoClustering"/>
+		<property name="segundaCartaHumanoClustering" column="segundaCartaHumanoClustering"/>
+		<property name="terceiraCartaHumanoClustering" column="terceiraCartaHumanoClustering"/>
+
+
+		<property name="primeiraCartaRoboClustering" column="primeiraCartaRoboClustering"/>
+		<property name="segundaCartaRoboClustering" column="segundaCartaRoboClustering"/>
+		<property name="terceiraCartaRoboClustering" column="terceiraCartaRoboClustering"/>
+
+		<property name="clusterPrimeiraCartaAgenteMao" column="clusterPrimeiraCartaAgenteMao"/>
+		<property name="clusterPrimeiraCartaAgentePe" column="clusterPrimeiraCartaAgentePe"/>
+
+		<property name="clusterSegundaCartaAgenteGanhouAprimeira" column="clusterSegundaCartaAgenteGanhouAprimeira"/>
+		<property name="clusterSegundaCartaAgentePerdeuAprimeira" column="clusterSegundaCartaAgentePerdeuAprimeira"/>
+
+		<property name="clusterTerceiraCartaAgenteGanhouAsegunda" column="clusterTerceiraCartaAgenteGanhouAsegunda"/>
+		<property name="clusterTerceiraCartaAgentePerdeuAsegunda" column="clusterTerceiraCartaAgentePerdeuAsegunda"/>
+
+
+		<property name="clusterGanhadorUltimaRodada" column="clusterGanhadorUltimaRodada"/>
+
+
+
+
+		<property name="clusterQuemEnvidoAgenteMao" column="clusterQuemEnvidoAgenteMao"/>
+
+		<property name="clusterQuemEnvidoAgentePe" column="clusterQuemEnvidoAgentePe"/>
+
+		<property name="clusterQuemFlor" column="clusterQuemFlor"/>
+
+		<property name="saldoEnvido" column="saldoEnvido"/>
+		<property name="saldoTruco" column="saldoTruco"/>
+		<property name="saldoFlor" column="saldoFlor"/>
+
+		<property name="clusteringindexacao" column="clusteringindexacao"/>
+
+		<property name="clusterBaralho" column="clusterBaralho"/>
+
+		<property name="clusteringIndexacaoPontos" column="clusteringIndexacaoPontos"/>
+
+		<property name="utilTruco" column="utilTruco"/>
+		<property name="utilEnvido" column="utilEnvido"/>
+		<property name="utilFlor" column="utilFlor"/>
+		<property name="utilCarta" column="utilCarta"/>
+
+
+		<property name="clusterQuemTrucoPrimeiraMao" column="clusterQuemTrucoPrimeiraMao"/>
+		<property name="clusterQuemTrucoPrimeiraPe" column="clusterQuemTrucoPrimeiraPe"/>
+
+		<property name="clusterQuemTrucoSegundaGanhouAnterior" column="clusterQuemTrucoSegundaGanhouAnterior"/>
+		<property name="clusterQuemTrucoSegundaPerdeuAnterior" column="clusterQuemTrucoSegundaPerdeuAnterior"/>
+
+		<property name="clusterQuemTrucoTerceiraGanhouAnterior" column="clusterQuemTrucoTerceiraGanhouAnterior"/>
+		<property name="clusterQuemTrucoTerceiraPerdeuAnterior" column="clusterQuemTrucoTerceiraPerdeuAnterior"/>
+
+		<property name="quemTrucoCluster" column="quemTrucoCluster"/>
+
+		<property name="quemRetrucoCluster" column="quemRetrucoCluster"/>
+
+		<property name="quemValeQuatroCluster" column="quemValeQuatroCluster"/>
+
+		<property name="quemPediuEnvidoCluster" column="quemPediuEnvidoCluster"/>
+
+		<property name="quemPediuRealEnvidoCluster" column="quemPediuRealEnvidoCluster"/>
+
+		<property name="quemPediuFaltaEnvidoCluster" column="quemPediuFaltaEnvidoCluster"/>
+
+		<property name="hasDeception" column="hasDeception"/>
+		<property name="diferencaPontuacao" column="diferencaPontuacao"/>
+		<property name="bluff1Success" column="bluff1Success"/>
+		<property name="bluff2Success" column="bluff2Success"/>
+		<property name="bluff3Success" column="bluff3Success"/>
+		<property name="bluff4Success" column="bluff4Success"/>
+		<property name="bluff5Success" column="bluff5Success"/>
+		<property name="bluff6Success" column="bluff6Success"/>
+		<property name="bluff1Failure" column="bluff1Failure"/>
+		<property name="bluff2Failure" column="bluff2Failure"/>
+		<property name="bluff3Failure" column="bluff3Failure"/>
+		<property name="bluff4Failure" column="bluff4Failure"/>
+		<property name="bluff5Failure" column="bluff5Failure"/>
+		<property name="bluff6Failure" column="bluff6Failure"/>
+		<property name="bluff1Opponent" column="bluff1Opponent"/>
+		<property name="bluff2Opponent" column="bluff2Opponent"/>
+		<property name="bluff3Opponent" column="bluff3Opponent"/>
+		<property name="bluff4Opponent" column="bluff4Opponent"/>
+		<property name="bluff5Opponent" column="bluff5Opponent"/>
+		<property name="bluff6Opponent" column="bluff6Opponent"/>
+		<property name="bluff1ShowDown" column="bluff2ShowDown"/>
+		<property name="bluff2ShowDown" column="bluff1ShowDown"/>
+		<property name="bluff3ShowDown" column="bluff3ShowDown"/>
+		<property name="bluff4ShowDown" column="bluff4ShowDown"/>
+		<property name="bluff5ShowDown" column="bluff5ShowDown"/>
+		<property name="bluff6ShowDown" column="bluff6ShowDown"/>
+
+	</class>
+</hibernate-mapping>

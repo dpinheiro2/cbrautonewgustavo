@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+	<class name="model.Match" table="matches">
+
+		<id name="idMatch" column="idMatch">
+			<generator class="increment"/>
+		</id>
+
+		<many-to-one name="player1" class="model.Player" fetch="join">
+			<column name="player1" not-null="false"/>
+		</many-to-one>
+
+		<many-to-one name="player2" class="model.Player" fetch="join">
+			<column name="player2" not-null="false"/>
+		</many-to-one>
+
+		<property name="pointsPlayer1"/>
+		<property name="pointsPlayer2"/>
+
+		<many-to-one name="winner" class="model.Player" fetch="join">
+			<column name="winner" not-null="false"/>
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

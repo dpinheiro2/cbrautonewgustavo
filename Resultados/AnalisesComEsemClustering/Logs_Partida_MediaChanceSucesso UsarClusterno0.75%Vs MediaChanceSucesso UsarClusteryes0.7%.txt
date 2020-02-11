@@ -1,0 +1,574 @@
+
+
+Inicio -- 15:11:10
+
+	######  Partida = 1  ######
+NovaPartida -- 15:11:10
+Recebida por 1		11e- Imp(5)-Id(7)		10e- Imp(4)-Id(6)		5c- Imp(1)-Id(2)
+Recebida por 2		11p- Imp(5)-Id(7)		10c- Imp(4)-Id(6)		5o- Imp(1)-Id(2)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 5c
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10c
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10e
+	 PLACAR	Agente 1 --- 0	Agente 2 --- 1
+
+
+Recebida por 1		2e- Imp(8)-Id(16)		12e- Imp(6)-Id(8)		4o- Imp(0)-Id(1)
+Recebida por 2		7e- Imp(11)-Id(42)		2p- Imp(8)-Id(16)		5e- Imp(1)-Id(2)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 7e
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2e
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2p
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+	 PLACAR	Agente 1 --- 0	Agente 2 --- 2
+
+
+Recebida por 1		3o- Imp(9)-Id(24)		3c- Imp(9)-Id(24)		7c- Imp(3)-Id(4)
+Recebida por 2		1e- Imp(13)-Id(52)		6o- Imp(2)-Id(3)		4c- Imp(0)-Id(1)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == ( Truco )
+2  negou jogo ( Truco )  na mao 1
+	 PLACAR	Agente 1 --- 1	Agente 2 --- 2
+
+
+Recebida por 1		12o- Imp(6)-Id(8)		11p- Imp(5)-Id(7)		4o- Imp(0)-Id(1)
+Recebida por 2		1o- Imp(7)-Id(12)		11e- Imp(5)-Id(7)		5p- Imp(1)-Id(2)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+	 PLACAR	Agente 1 --- 1	Agente 2 --- 3
+
+
+Recebida por 1		7e- Imp(11)-Id(42)		3o- Imp(9)-Id(24)		1o- Imp(7)-Id(12)
+Recebida por 2		1e- Imp(13)-Id(52)		3c- Imp(9)-Id(24)		11o- Imp(5)-Id(7)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 1o
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3c
+	 PLACAR	Agente 1 --- 2	Agente 2 --- 3
+
+
+Recebida por 1		3o- Imp(9)-Id(24)		10p- Imp(4)-Id(6)		5p- Imp(1)-Id(2)
+Recebida por 2		2p- Imp(8)-Id(16)		2c- Imp(8)-Id(16)		10e- Imp(4)-Id(6)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2c
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 5p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10e
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 3
+	 PLACAR	Agente 1 --- 2	Agente 2 --- 4
+
+
+Recebida por 1		2o- Imp(8)-Id(16)		11c- Imp(5)-Id(7)		5e- Imp(1)-Id(2)
+Recebida por 2		10c- Imp(4)-Id(6)		6c- Imp(2)-Id(3)		4e- Imp(0)-Id(1)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 5e
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 2	Agente 2 --- 5
+
+
+Recebida por 1		2e- Imp(8)-Id(16)		12p- Imp(6)-Id(8)		10p- Imp(4)-Id(6)
+Recebida por 2		12o- Imp(6)-Id(8)		10c- Imp(4)-Id(6)		4c- Imp(0)-Id(1)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 12o
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10c
+	 PLACAR	Agente 1 --- 3	Agente 2 --- 5
+
+
+Recebida por 1		10e- Imp(4)-Id(6)		10o- Imp(4)-Id(6)		4o- Imp(0)-Id(1)
+Recebida por 2		2o- Imp(8)-Id(16)		1c- Imp(7)-Id(12)		12c- Imp(6)-Id(8)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1c
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10o
+	 PLACAR	Agente 1 --- 3	Agente 2 --- 6
+
+
+Recebida por 1		7e- Imp(11)-Id(42)		12p- Imp(6)-Id(8)		6p- Imp(2)-Id(3)
+Recebida por 2		2c- Imp(8)-Id(16)		11p- Imp(5)-Id(7)		5c- Imp(1)-Id(2)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2c
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 7e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11p
+	 PLACAR	Agente 1 --- 4	Agente 2 --- 6
+
+
+Recebida por 1		1p- Imp(12)-Id(50)		3o- Imp(9)-Id(24)		2e- Imp(8)-Id(16)
+Recebida por 2		1o- Imp(7)-Id(12)		11c- Imp(5)-Id(7)		10o- Imp(4)-Id(6)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2e
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11c
+	 PLACAR	Agente 1 --- 5	Agente 2 --- 6
+
+
+Recebida por 1		12e- Imp(6)-Id(8)		12c- Imp(6)-Id(8)		4p- Imp(0)-Id(1)
+Recebida por 2		1e- Imp(13)-Id(52)		11c- Imp(5)-Id(7)		6o- Imp(2)-Id(3)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1e
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11c
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+	 PLACAR	Agente 1 --- 5	Agente 2 --- 7
+
+
+Recebida por 1		1p- Imp(12)-Id(50)		12c- Imp(6)-Id(8)		5c- Imp(1)-Id(2)
+Recebida por 2		2p- Imp(8)-Id(16)		2c- Imp(8)-Id(16)		10o- Imp(4)-Id(6)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 5c
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == ( Truco )
+2  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 6	Agente 2 --- 7
+
+
+Recebida por 1		10o- Imp(4)-Id(6)		10c- Imp(4)-Id(6)		4p- Imp(0)-Id(1)
+Recebida por 2		3p- Imp(9)-Id(24)		5o- Imp(1)-Id(2)		5p- Imp(1)-Id(2)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3p
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 5p
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+	 PLACAR	Agente 1 --- 6	Agente 2 --- 8
+
+
+Recebida por 1		1e- Imp(13)-Id(52)		2p- Imp(8)-Id(16)		4p- Imp(0)-Id(1)
+Recebida por 2		1o- Imp(7)-Id(12)		12c- Imp(6)-Id(8)		6o- Imp(2)-Id(3)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 12c
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == ( Truco )
+2  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 7	Agente 2 --- 8
+
+
+Recebida por 1		7e- Imp(11)-Id(42)		12e- Imp(6)-Id(8)		6p- Imp(2)-Id(3)
+Recebida por 2		3o- Imp(9)-Id(24)		3c- Imp(9)-Id(24)		1o- Imp(7)-Id(12)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3c
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 7e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12e
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3c
+JOGADOR  1  na mao  3
+1 vai chamar jogada  == (  )
+1 jogou a carta == 6p
+	 PLACAR	Agente 1 --- 7	Agente 2 --- 9
+
+
+Recebida por 1		1p- Imp(12)-Id(50)		3c- Imp(9)-Id(24)		2c- Imp(8)-Id(16)
+Recebida por 2		2p- Imp(8)-Id(16)		1o- Imp(7)-Id(12)		10e- Imp(4)-Id(6)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2c
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2p
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+	 PLACAR	Agente 1 --- 8	Agente 2 --- 9
+
+
+Recebida por 1		3c- Imp(9)-Id(24)		6p- Imp(2)-Id(3)		4p- Imp(0)-Id(1)
+Recebida por 2		3e- Imp(9)-Id(24)		11o- Imp(5)-Id(7)		5p- Imp(1)-Id(2)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3e
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+	 PLACAR	Agente 1 --- 8	Agente 2 --- 10
+
+
+Recebida por 1		2c- Imp(8)-Id(16)		11c- Imp(5)-Id(7)		10p- Imp(4)-Id(6)
+Recebida por 2		7e- Imp(11)-Id(42)		3c- Imp(9)-Id(24)		4e- Imp(0)-Id(1)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10p
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 4e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 11c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 8	Agente 2 --- 11
+
+
+Recebida por 1		2o- Imp(8)-Id(16)		12p- Imp(6)-Id(8)		4o- Imp(0)-Id(1)
+Recebida por 2		11p- Imp(5)-Id(7)		10p- Imp(4)-Id(6)		7p- Imp(3)-Id(4)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == ( Flor )
+1  aceitou ponto ( Flor )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11p
+JOGADOR  1  na mao  1
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10p
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == (  )
+2 jogou a carta == 7p
+JOGADOR  1  na mao  3
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12p
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 14
+
+
+Recebida por 1		7c- Imp(3)-Id(4)		5p- Imp(1)-Id(2)		4o- Imp(0)-Id(1)
+Recebida por 2		7e- Imp(11)-Id(42)		12o- Imp(6)-Id(8)		11o- Imp(5)-Id(7)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11o
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 15
+
+
+Recebida por 1		11p- Imp(5)-Id(7)		6p- Imp(2)-Id(3)		4e- Imp(0)-Id(1)
+Recebida por 2		11o- Imp(5)-Id(7)		10c- Imp(4)-Id(6)		4p- Imp(0)-Id(1)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11o
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 11p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 16
+
+
+Recebida por 1		10e- Imp(4)-Id(6)		10p- Imp(4)-Id(6)		6c- Imp(2)-Id(3)
+Recebida por 2		3p- Imp(9)-Id(24)		7p- Imp(3)-Id(4)		5o- Imp(1)-Id(2)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 6c
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 3p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 7p
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10p
+JOGADOR  1  na mao  3
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10p
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 3
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 17
+
+
+Recebida por 1		2c- Imp(8)-Id(16)		12c- Imp(6)-Id(8)		7p- Imp(3)-Id(4)
+Recebida por 2		2p- Imp(8)-Id(16)		12o- Imp(6)-Id(8)		6e- Imp(2)-Id(3)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2p
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 18
+
+
+Recebida por 1		10p- Imp(4)-Id(6)		6p- Imp(2)-Id(3)		4o- Imp(0)-Id(1)
+Recebida por 2		2o- Imp(8)-Id(16)		2p- Imp(8)-Id(16)		10o- Imp(4)-Id(6)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4o
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 2p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 10o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 6p
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 19
+
+
+Recebida por 1		3p- Imp(9)-Id(24)		5c- Imp(1)-Id(2)		4p- Imp(0)-Id(1)
+Recebida por 2		7o- Imp(10)-Id(40)		12e- Imp(6)-Id(8)		6p- Imp(2)-Id(3)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 7o
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 12e
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 20
+
+
+Recebida por 1		3o- Imp(9)-Id(24)		5c- Imp(1)-Id(2)		4p- Imp(0)-Id(1)
+Recebida por 2		1e- Imp(13)-Id(52)		7e- Imp(11)-Id(42)		11c- Imp(5)-Id(7)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 4p
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11c
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 2
+	 PLACAR	Agente 1 --- 9	Agente 2 --- 21
+
+
+Recebida por 1		3c- Imp(9)-Id(24)		12e- Imp(6)-Id(8)		5e- Imp(1)-Id(2)
+Recebida por 2		1o- Imp(7)-Id(12)		12o- Imp(6)-Id(8)		11e- Imp(5)-Id(7)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 1o
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 3c
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 5e
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 12o
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == (  )
+2 jogou a carta == 11e
+JOGADOR  1  na mao  3
+1 vai chamar jogada  == (  )
+1 jogou a carta == 12e
+	 PLACAR	Agente 1 --- 10	Agente 2 --- 21
+
+
+Recebida por 1		2o- Imp(8)-Id(16)		2e- Imp(8)-Id(16)		10o- Imp(4)-Id(6)
+Recebida por 2		12p- Imp(6)-Id(8)		6o- Imp(2)-Id(3)		5o- Imp(1)-Id(2)
+JOGADOR  1  na mao  1
+1 vai chamar ponto == (  )
+1 vai chamar jogada  == (  )
+1 jogou a carta == 10o
+JOGADOR  2  na mao  1
+2 vai chamar ponto == (  )
+2 vai chamar jogada  == (  )
+2 jogou a carta == 12p
+JOGADOR  2  na mao  2
+2 vai chamar jogada  == (  )
+2 jogou a carta == 6o
+JOGADOR  1  na mao  2
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2e
+JOGADOR  1  na mao  3
+1 vai chamar jogada  == (  )
+1 jogou a carta == 2e
+JOGADOR  2  na mao  3
+2 vai chamar jogada  == ( Truco )
+1  negou jogo ( Truco )  na mao 3
+	 PLACAR	Agente 1 --- 10	Agente 2 --- 22
+
+
+Recebida por 1		2p- Imp(8)-Id(16)		5e- Imp(1)-Id(2)		4e- Imp(0)-Id(1)
+Recebida por 2		2c- Imp(8)-Id(16)		12c- Imp(6)-Id(8)		10c- Imp(4)-Id(6)
+JOGADOR  2  na mao  1
+2 vai chamar ponto == ( Flor )
+1  aceitou ponto ( Flor )
+2 vai chamar jogada  == (  )
+
+
+Fim -- 15:16:53

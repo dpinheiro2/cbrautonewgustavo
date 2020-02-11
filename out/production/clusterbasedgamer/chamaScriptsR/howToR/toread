@@ -1,0 +1,5 @@
+é preciso instalar no core do R as bibliotecas DBI e RMySQL
+
+precisam ser alterados os dados das conexões com a base no package-> scriptsR> funcoesAuxiliares
+
+para executar no windows é preciso alterar a syntax do comando execute na classe executeScripts

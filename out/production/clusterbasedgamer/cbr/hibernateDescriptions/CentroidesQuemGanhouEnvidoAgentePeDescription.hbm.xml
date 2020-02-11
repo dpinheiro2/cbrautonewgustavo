@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+<class name="cbr.cbrDescriptions.CentroidesQuemGanhouEnvidoDescription" table="centroidesQuemGanhouEnvidoAgentePe">
+
+	<id name="id" column="id">
+	  <generator class="native"/>
+	</id>
+		
+
+	<property name="grupo" column="grupo"/>
+	
+		
+		<property name="quemPediuEnvido" column="quemPediuEnvido"/>
+		<property name="quemPediuRealEnvido" column="quemPediuRealEnvido"/>
+		<property name="quemPediuFaltaEnvido" column="quemPediuFaltaEnvido"/>
+		<property name="pontosEnvidoRobo" column="pontosEnvidoRobo"/>	
+		
+		
+		
+		
+	   <property name="numerok" column="numerok"/>
+
+
+</class>
+</hibernate-mapping>

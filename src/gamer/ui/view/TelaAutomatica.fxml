@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="700.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamer.ui.controller.ControllerTelaAutomatica">
+   <children>
+      <Pane prefHeight="302.0" prefWidth="327.0">
+         <children>
+            <Text layoutX="182.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set 1" />
+            <Label layoutX="5.0" layoutY="36.0" text="Base" />
+            <ComboBox fx:id="cmbTiposBase1" layoutX="158.0" layoutY="33.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTiposReuso1" layoutX="158.0" layoutY="74.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTipoReusoIntra1" layoutX="160.0" layoutY="114.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbUsarCluster1" layoutX="158.0" layoutY="161.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTiposAprendizagem1" layoutX="156.0" layoutY="212.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbThreshold1" layoutX="155.0" layoutY="252.0" prefWidth="150.0" />
+            <Label layoutX="3.0" layoutY="79.0" text="ReusoExtraCluster" />
+            <Label layoutX="4.0" layoutY="119.0" text="ReusoIntraCluster" />
+            <Label layoutX="14.0" layoutY="166.0" text="Usar Cluster" />
+            <Label layoutX="21.0" layoutY="217.0" text="Aprendizagem" />
+            <Label layoutX="45.0" layoutY="257.0" text="Threshold" />
+         </children>
+      </Pane>
+      <Button fx:id="btnTreinar" layoutX="278.0" layoutY="397.0" mnemonicParsing="false" onAction="#Treinar" text="Iniciar Treinamento" textAlignment="CENTER" />
+      <Text layoutX="216.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de Partidas : " />
+      <TextField fx:id="txtNumeroPartidas" alignment="CENTER" layoutX="367.0" layoutY="363.0" prefHeight="26.0" prefWidth="129.0" promptText="Número de partidas" />
+      <Pane layoutX="358.0" layoutY="4.0" prefHeight="287.0" prefWidth="340.0">
+         <children>
+            <ComboBox fx:id="cmbTiposBase2" layoutX="171.0" layoutY="35.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTiposReuso2" layoutX="171.0" layoutY="77.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTipoReusoIntra2" layoutX="171.0" layoutY="113.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbUsarCluster2" layoutX="171.0" layoutY="164.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbTiposAprendizagem2" layoutX="171.0" layoutY="212.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbThreshold2" layoutX="171.0" layoutY="254.0" prefWidth="150.0" />
+            <Label layoutX="21.0" layoutY="40.0" text="Base" />
+            <Label layoutX="14.0" layoutY="77.0" text="ReusoExtraCluster" />
+            <Label layoutX="19.0" layoutY="118.0" text="ReusoIntraCluster" />
+            <Label layoutX="19.0" layoutY="169.0" text="Usar Cluster" />
+            <Label layoutX="19.0" layoutY="217.0" text="Aprendizagem" />
+            <Label layoutX="19.0" layoutY="267.0" text="Threshold" />
+         </children>
+      </Pane>
+      <ComboBox fx:id="cmbTecnica1" layoutX="37.0" layoutY="397.0" prefHeight="26.0" prefWidth="104.0" />
+      <ComboBox fx:id="cmbTecnica2" layoutX="543.0" layoutY="397.0" prefHeight="26.0" prefWidth="104.0" />
+      <Label layoutX="562.0" layoutY="368.0" text="Técnica" />
+      <Label layoutX="47.0" layoutY="368.0" text="Técnica:" />
+      <Label layoutX="21.0" layoutY="318.0" text="Auto ajustar o k:" />
+      <Label layoutX="369.0" layoutY="318.0" text="Auto ajustar o k:" />
+      <ComboBox fx:id="cmbAutoAJustarK1" layoutX="156.0" layoutY="313.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbAutoAjustarK2" layoutX="528.0" layoutY="313.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

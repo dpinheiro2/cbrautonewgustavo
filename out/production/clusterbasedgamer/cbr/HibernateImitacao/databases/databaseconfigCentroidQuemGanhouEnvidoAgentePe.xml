@@ -1,0 +1,8 @@
+<DataBaseConfiguration>
+	<HibernateConfigFile>cbr/HibernateImitacao/hibernate.cfg.xml</HibernateConfigFile>
+	
+	<DescriptionMappingFile>cbr/hibernateDescriptions/CentroidesQuemGanhouEnvidoAgentePeDescription.hbm.xml</DescriptionMappingFile>
+	<DescriptionClassName>CentroidesQuemGanhouEnvidoDescription</DescriptionClassName>	
+
+
+</DataBaseConfiguration>

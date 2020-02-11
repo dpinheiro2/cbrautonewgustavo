@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f583ed8-dfa3-4d71-9e2a-bddb621fd9bb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/cbrautonewgustavo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cbrautonewgustavo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/combinatoricslib3-3.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/cbrautonewgustavo_jar/cbrautonewgustavo.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaBaralho.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaCartaVirada.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaFlor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaJogada.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/AjudaPontos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/ConsultaCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/ValidaGanhadorMao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/Ajudas/saldoModeloPorAcao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CbrQuerys/CBR.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CbrQuerys/CBRCentroides.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/AtributosConsultaCentroideJogadaModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/AtributosConsultaCentroideQuandoTrucoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/AtributosConsultaCentroideQuemGanhouEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/AtributosConsultaCentroideQuemTrucoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/CaseBasesModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroidePrimeiraCartaRoboMaoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroidePrimeiraCartaRoboPe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroideQuemGanhouEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroideQuemTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroideSegundaCartaRoboGanhouAprimeira.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaCentroideSegundaCartaRoboPerdeuAprimeira.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoConsultaTerceiraCartaRoboGanhouAsegunda.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/CentroidesModelo/ResultadoTerceiraCartaRoboPerdeuAsegunda.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraCluster/AcaoFeitasIntraClusterEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraCluster/AcaoFeitasIntraClusterTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraCluster/CartasJogadasIntraCluster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterChanceSaldo/AcaoFeitasIntraClusterEnvidoChanceSaldo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterChanceSaldo/AcaoFeitasIntraClusterTrucoChanceSaldo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterChanceSaldo/CartasJogadasIntraClusterChanceSaldo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterMaioria/AcaoFeitasIntraClusterEnvidoMaioria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterMaioria/AcaoFeitasIntraClusterTrucoMaioria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterMaioria/CartasJogadasIntraClusterMaioria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeChance/AcaoFeitasIntraClusterEnvidoProbabilidadeChance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeChance/AcaoFeitasIntraClusterTrucoProbabilidadeChance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeChance/CartasJogadasIntraClusterProbabilidadeChance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeSorteio/AcaoFeitasIntraClusterEnvidoProbabilidadeSorteio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeSorteio/AcaoFeitasIntraClusterTrucoProbabilidadeSorteio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/DecisionsIntraClusterProbabilidadeSorteio/CartasJogadasIntraClusterProbabilidadeSorteio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/UtilProbabilidadeChance/ProbabilidadeChance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/UtilProbabilidadeChance/UtilProbabilidadeChanceIntraClusterEnvidoEtruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/UtilSaldo/Saldos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/CalcularCentroides.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/MaioriaAceitarModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/MaioriaIrAoBaralhoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/MaioriaModeloSelecao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/RetornaMaiorEmenorSaldo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/UtilClusterCentroides.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/UtilSaldos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/converteFormatosCartasParaCartasJogadasClustering.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ajudaCluster/converteTrucoDescriptionParaCentroidesGrupoIndexacaoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Adaptacoes/CbrModular.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AtualizaConsultasApartirDoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AtualizarConsultas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AtualizarConsultasServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/CartasModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/JogadasAceitasModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/JogadasChamadasModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/JogadasNaoAceitasModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/JogadasQuePodemSerAceitasModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/QuemGanhouPontosModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/QuemGanhouRodadaModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/AtualizaConsultas/AuxiliaConsultas/TentosGanhos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidPrimeiraCartaRoboMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidPrimeiraCartaRoboPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemGanhouEnvidoAgenteMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemGanhouEnvidoAgentePe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoPrimeiraMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoPrimeiraPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoSegundaGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoSegundaPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoTerceiraGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidQuemTrucoTerceiraPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidSegundaCartaRoboGanhouAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidSegundaCartaRoboPerdeuAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidTerceiraCartaRoboGanhouAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroidTerceiraCartaRoboPerdeuAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroideIndexacao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/databases/databaseconfigCentroideIndexacaoPontos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/Hibernate/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidPrimeiraCartaRoboMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidPrimeiraCartaRoboPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemGanhouEnvidoAgenteMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemGanhouEnvidoAgentePe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoPrimeiraMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoPrimeiraPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoSegundaGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoSegundaPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoTerceiraGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidQuemTrucoTerceiraPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidSegundaCartaRoboGanhouAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidSegundaCartaRoboPerdeuAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidTerceiraCartaRoboGanhouAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroidTerceiraCartaRoboPerdeuAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroideIndexacao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/databases/databaseconfigCentroideIndexacaoPontos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateAtivo/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidPrimeiraCartaRoboMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidPrimeiraCartaRoboPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemGanhouEnvidoAgenteMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemGanhouEnvidoAgentePe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoPrimeiraMao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoPrimeiraPe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoSegundaGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoSegundaPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoTerceiraGanhouAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidQuemTrucoTerceiraPerdeuAnterior.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidSegundaCartaRoboGanhouAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidSegundaCartaRoboPerdeuAprimeira.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidTerceiraCartaRoboGanhouAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroidTerceiraCartaRoboPerdeuAsegunda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroideIndexacao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/databases/databaseconfigCentroideIndexacaoPontos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/HibernateImitacao/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/KindQueryEmpty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/PesosConsulta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesGrupoIndexacaoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesGrupoIndexacaoPontosDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesPrimeiraCartaRoboMaoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesPrimeiraCartaRoboPeDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesQuemGanhouEnvidoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesQuemTrucoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesSegundaCartaRoboGanhouAprimeiraDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesSegundaCartaRoboPerdeuAprimeiraDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesTerceiraCartaRoboGanhouAsegundaDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/CentroidesTerceiraCartaRoboPerdeuAsegundaDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/cbrDescriptions/TrucoDescription.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesGrupoIndexacaoPontosDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesPrimeiraCartaRoboMaoDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesPrimeiraCartaRoboPeDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemGanhouEnvidoAgenteMaoDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemGanhouEnvidoAgentePeDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoPrimeiraMaoDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoPrimeiraPeDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoSegundaGanhouAnteriorDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoSegundaPerdeuAnteriorDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoTerceiraGanhouAnteriorDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesQuemTrucoTerceiraPerdeuAnteriorDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesSegundaCartaRoboGanhouAprimeiraDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesSegundaCartaRoboPerdeuAprimeiraDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesTerceiraCartaRoboGanhouAsegundaDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/CentroidesTerceiraCartaRoboPerdeuAsegundaDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/TrucoDescription.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/hibernateDescriptions/centroidesgrupoindexacao.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/Persistir.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/ValidaCriterioReusoAtivoOuAleatorio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/ValidaPersistir.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/ativo/PersistirAtivo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/ativo/ValidaCriterioReusoAtivo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/ativo/ValidaDevePersistirAtivo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/imitacao/PersistirImitacao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/imitacao/ValidaCriterioReusoImitacao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/cbr/learning/imitacao/ValidaDevePersistirImitacao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/chamaScriptsR/ChamaScriptsRnegocio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/chamaScriptsR/ExecutaTodosMainDefault.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/chamaScriptsR/ExecutaTodosMainImitacao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/chamaScriptsR/ExecuteScripts.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/chamaScriptsR/howToR/toread" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/ClusterMioriaNoGrupoMaisSimilarModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/ControlaClustersAnterioresCartas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/ControlaClustersAnterioresMedia.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/EnvidoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/MaiorEmenorSaldoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/PontuacaoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/QuandoTrucoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/SaldoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/clusterModelo/TrucoModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisions/DecisionExtaClusterTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisions/DecisionExtraClusterCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisions/DecisionExtraClusterEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterChanceSaldo/DecisionExtaClusterChanceDeSucessoEsaldoCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterChanceSaldo/DecisionExtraClusterChanceDeSucessoEsaldoEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterChanceSaldo/DecisionExtraClusterChanceDeSucessoEsaldoTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterMaioria/DecisionExtraClusterMaioriaCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterMaioria/DecisionExtraClusterMaioriaEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterMaioria/DecisionExtraClusterMaioriaTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilityChance/DecisionExtaClusterProbabilidadeSucessoCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilityChance/DecisionExtraClusterProbabilidadeSucessoEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilityChance/DecisionExtraClusterProbabilidadeTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilitySorteio/DecisionExtraClusterProbabilitySorteioCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilitySorteio/DecisionExtraClusterProbabilitySorteioEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/decisionsExtraClusterProbabilitySorteio/DecisionExtraClusterProbabilitySorteioTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/euclidean/GlobalEuclidean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/euclidean/LocalEuclidean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hash/HashCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hash/HashEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hash/HashTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashCluster/HashClusterCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashCluster/HashClusterEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashCluster/HashClusterTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashSolucao/HashSolucaoCarta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashSolucao/HashSolucaoEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/hashSolucao/HashSolucaoTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/casebase/CachedLinealCaseBaseGustavoNew.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/casebase/CachedLinealCaseBaseNew.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/casebase/IDIndexedLinealCaseBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/casebase/LinealCaseBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/casebase/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbraplications/StandardCBRApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbraplications/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/Attribute.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CBRCase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CBRCaseBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CBRCaseBaseGustavo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CBRQuery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CaseBaseFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/CaseComponent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/Connector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/Filter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/cbrcore/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/DataBaseConnectorGustavoNew.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/DataBaseConnectorNew.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/OntologyConnector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/PlainTextConnector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/TypeAdaptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/databaseutils/EnumUserType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/databaseutils/GenericUserType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/databaseutils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/ontologyutils/OntologyInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/ontologyutils/OntologyMapping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/ontologyutils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/plaintextutils/PlainTextTypeConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/plaintextutils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/xmlutils/CaseComponentSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/xmlutils/QuerySerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/connector/xmlutils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/datatypes/Instance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/datatypes/Text.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/datatypes/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/EvaluationReport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/Evaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/evaluators/HoldOutEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/evaluators/LeaveOneOutEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/evaluators/NFoldEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/evaluators/SameSplitEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/evaluators/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/tools/EvaluationResultGUI$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/tools/EvaluationResultGUI$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/tools/EvaluationResultGUI$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/tools/EvaluationResultGUI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/evaluation/tools/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/AttributeAccessException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/ExecutionException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/InitializingException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/NoApplicableFilterPredicateException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/NoApplicableSimilarityFunctionException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/OntologyAccessException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/UnImplementedException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/exception/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/classification/ClassificationSolution.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/classification/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/DetailedEvaluationReport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/MaintenanceEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/evaluators/MaintenanceHoldOutEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/evaluators/MaintenanceLeaveOneOutEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/evaluators/MaintenanceNFoldEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/evaluators/MaintenanceSameSplitEvaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/evaluators/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/maintenance_evaluation/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/ContentBasedProfile/CreateProfile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/ContentBasedProfile/ObtainQueryFromProfile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/ContentBasedProfile/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/askingAndProposing/AskingAndProposingPreferenceElicitation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/askingAndProposing/DisplayCasesIfNumberAndChangeNavigation$NavigationMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/askingAndProposing/DisplayCasesIfNumberAndChangeNavigation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/askingAndProposing/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod$DisplayOption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/DisplayCasesTableMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/UserChoice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/utils/RadioButtonEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/utils/RadioButtonTableRenderer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/casesDisplay/utils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/CollaborativeRetrievalMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/MatrixCaseBase$CommonRatingTuple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/MatrixCaseBase$CommonRatingsIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/MatrixCaseBase$RatingTuple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/MatrixCaseBase$SimilarTuple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/MatrixCaseBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/PearsonMatrixCaseBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/collaborative/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/conditionals/BuyOrQuit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/conditionals/ContinueOrFinish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/conditionals/DisplayCasesIfNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/conditionals/DisplayCasesIfSimilarity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/conditionals/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/InformationGain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/ObtainQueryWithAttributeQuestionMethod$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/ObtainQueryWithAttributeQuestionMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/SelectAttributeMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/SimilarityInfluence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByAsking/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/CriticalUserChoice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/CritiqueOption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod$CritiqueButtonAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod$ItemRadioButtonListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/DisplayCasesTableWithCritiquesMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/ComparisonQueryElicitation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/LessLikeThis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/MoreAndLessLikeThis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/MoreLikeThis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/PartialMoreLikeThis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/WeightedMoreLikeThis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/navigationByProposing/queryElicitation/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/tabuList/TabuList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/recommendation/tabuList/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/IEutils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/BasicInformationExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/DomainTopicClassifier$TopicRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/DomainTopicClassifier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/FeaturesExtractor$FeatureRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/FeaturesExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/GlossaryLinker$GlossaryTriple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/GlossaryLinker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/PhrasesExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/StopWordsDetector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/TextStemmer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/ThesaurusLinker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/common/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/GateFeaturesExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/GatePOStagger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/GatePhrasesExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/GateSplitter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/IETextGate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/InitGate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/gate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/creole.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/BengaliSampleText.utf8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/gazetteer/bengali_gazetteer.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/gazetteer/city_bengali.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/gazetteer/forenames.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/gazetteer/organisations.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/gazetteer/surnames.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/grammar/location.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/grammar/main.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/grammar/organisation.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/grammar/person.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/BengaliNE/tokeniser/BengaliTokeniser.rules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/address.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/clean.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/date.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/date_pre.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/email.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/final.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/first.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/firstname.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/gender.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/identifier.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/jobtitle.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/loc_context.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/main.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/name.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/name_context.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/name_post.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/number.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/org_context.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/reldate.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/unknown.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/url.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/NE/url_pre.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/VP/VerbGroups.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/abbreviations.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/cdg.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/charities.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/city.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/city_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/colours.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/company.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/company_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/country.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/country_adj.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/country_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/currency_prefix.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/currency_unit.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/date.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/date_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/date_post.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/date_pre.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/date_unit.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/datespan.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/day.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/department.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/determiner.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/festival.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/govern_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/government.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/hour.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/ident_prekey.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/jobtitles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/lists.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/loc_generalkey.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/loc_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/loc_prekey.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/loc_prekey_lower.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/loc_relig.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/mapping.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/ministry.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/minutes.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/months.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/mountain.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/new_adj.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/new_cdg.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/non_company.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/nonspec_date.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/not_org.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/numbers.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/ordinal.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_base.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_ending.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_key_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_pre.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/org_spur.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/organization.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/organization_nouns.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/othorg_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_ambig.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_ambig2.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_ambig_lower.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_ending.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_female.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_female_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_female_lower.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_first.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_full.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_male.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_male_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_male_lower.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/person_relig.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/phone_prefix.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/planet.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/province.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/province_aa.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/province_ab.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/region.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/region_cap.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/region_uk.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/spur_ident.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/stop.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/street.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/surname_prefix.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/time_ampm.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/time_key.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/time_modifier.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/time_unit.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/times.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/timespan.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/timex_pre.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/timezone.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_female.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_lower.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_lowercase.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_male.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_mil.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/title_pol.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/water.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/gazetteer/year.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/lexicon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/lexicon_all" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/lexicon_cap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/lexicon_lower" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/old_lexicon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/rules_cap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/heptag/ruleset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/acelists.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/alias.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/alias_ace.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/cdg.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/chinese_alias.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/connnector.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/def_art.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/listsNM.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/prepos.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/othomatcher/spur_match.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/gazetteer/abbreviations.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/gazetteer/lists.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/find-single-nl.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/find.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/main-single-nl.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/main.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/removelookup.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/sentenceSplitter/grammar/split.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/DefaultTokeniser.rules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/bothlexu8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/sforeign_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/simplexu8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/snotname_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/snumbers_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/ssurname_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/tforeign_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/tnotname_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/tnumbers_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/tradlexu8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/chinesetokeniser/tsurname_u8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/plugins/ANNIE/resources/tokeniser/postprocess.jape" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/gateinit/user-gate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/gate/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/opennlp/IETextOpenNLP.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/opennlp/OpennlpMainNamesExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/opennlp/OpennlpPOStagger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/opennlp/OpennlpSplitter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/opennlp/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/IEText.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/Paragraph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/Sentence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/Token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/info/FeatureInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/info/PhraseInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/info/WeightedRelation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/info/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/IE/representation/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusterer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusterer$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusterer$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusterer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusteringResult$Cluster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/CarrotClusteringResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/TestCarrot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/carrot2/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/LuceneDocument.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/LuceneIndex.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/LuceneSearchResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/LuceneSearcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/TestLucene.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/spanish/SpanishAnalyzer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/spanish/SpanishStemmerFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/spanish/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/lucene/spanish/stopwords-spanish.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/stemmer/Stemmer$Language.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/stemmer/Stemmer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/textual/stemmer/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/visualization/CasesVisualization.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/extensions/visualization/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/BooleanEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/DateEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/DoubleEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/EnumEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/FileEditor$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/FileEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/InstanceEditor$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/InstanceEditor$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/InstanceEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/IntegerEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/ParameterEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/ParameterEditorFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/StringEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/TextEditor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/editors/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/formFilling/ObtainQueryWithFormMethod$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/formFilling/ObtainQueryWithFormMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/formFilling/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/utils/LayoutUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/utils/WindowUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/gui/utils/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/AbstractCaseBaseEditMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/CaseResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/CompetenceModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/QueryResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/SolvesFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/TwoStepCaseBaseEditMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/BBNRNoiseReduction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/CRRFull.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/CRRRedundancyRemoval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/ICFFull.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/ICFRedundancyRemoval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/RCFull.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/RCRedundancyRemoval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/RENNNoiseReduction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/algorithms/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/solvesFunctions/CBESolvesFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/solvesFunctions/ICFSolvesFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/maintenance/solvesFunctions/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/postcycle/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/precycle/LuceneIndexCreator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/precycle/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retain/StoreCasesMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retain/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/DiverseByMedianRetrieval/ExpertClerkMedianScoring.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/DiverseByMedianRetrieval/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/FilterBasedRetrievalMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/FilterConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/Equal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/EqualTo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/FilterPredicate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/NotEqual.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/NotEqualTo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/OntologyCompatible.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/QueryLess.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/QueryLessOrEqual.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/QueryMore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/QueryMoreOrEqual.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/Threshold.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/FilterBasedRetrieval/predicates/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/LuceneRetrieval/LuceneRetrieval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/LuceneRetrieval/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/NNConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/NNScoringMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/GlobalSimilarityFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/InContextLocalSimilarityFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/LocalSimilarityFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/StandardGlobalSimilarityFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/global/Average.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/global/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/EnumCyclicDistance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/EnumDistance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/Equal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/EqualsStringIgnoreCase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/Interval.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/MaxString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/Table.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/Threshold.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/ontology/OntCosine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/ontology/OntDeep.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/ontology/OntDeepBasic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/ontology/OntDetail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/ontology/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/recommenders/InrecaLessIsBetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/recommenders/InrecaMoreIsBetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/recommenders/McSherryLessIsBetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/recommenders/McSherryMoreIsBetter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/recommenders/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/CosineCoefficient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/DiceCoefficient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/JaccardCoefficient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/LuceneTextSimilarity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/OverlapCoefficient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/TextualSimUtils$WeightedString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/TextualSimUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/compressionbased/CompressionBased.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/compressionbased/GZipCompressor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/compressionbased/ICompressor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/compressionbased/NormalisedCompression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/compressionbased/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/local/textual/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/NNretrieval/similarity/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/RetrievalResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/SelectCases.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/compromiseDriven/CDRSet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/compromiseDriven/CompromiseDrivenSelection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/compromiseDriven/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/diversity/BoundedGreedySelection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/diversity/BoundedRandomSelection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/diversity/GreedySelection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/diversity/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/retrieve/selection/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/CombineQueryAndCasesMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/DirectAttributeCopyMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/NumericDirectProportionMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/AbstractKNNClassificationMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/KNNClassificationConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/KNNClassificationMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/MajorityVotingMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/SimilarityWeightedVotingMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/UnanimousVotingMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/classification/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/reuse/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/revise/DefineNewIdsMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/revise/classification/BasicClassificationOracle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/revise/classification/ClassificationOracle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/revise/classification/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/method/revise/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/AttributeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/CopyUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/FileIO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/Launcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/OntoBridgeSingleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/ProgressController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/ProgressListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/jcolibri/util/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/markov/RespondeMarkovEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/AnaliseExploratoria/estatisticasClustersPrimeiraCartaJogadorMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/scriptPrimeiraCartaRoboEpe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/scriptPrimeiraCartaRoboMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/scriptTerceiraCartaRoboGanhouAsegunda.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/scriptTerceiraCartaRoboPerdeuAsegunda.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/segundaCartaRoboGanhouAprimeira.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/cartas/segundaCartaroboPerdeuAprimeiraScript.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/comando.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/envido/.Rhistory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/envido/scriptQuemGanhouEnvidoAgenteMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/envido/scriptQuemGanhouEnvidoAgentePe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/flor/clusterQuemFlorPrecisaSerConcluido.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/indexacao/indexacao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/indexacao/indexacaoPontos.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoPrimeiraMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoPrimeiraPe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoSegundaGanhouAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoSegundaPerdeuAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoTerceiraGanhouAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/truco/QuemTrucoTerceiraPerdeuAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/utilitarios/UtilitariosElbowEgraficosFinal.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/utilitarios/funcoesAuxiliaresAtivo.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/utilitarios/funcoesAuxiliaresDefault.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR Backup/utilitarios/funcoesAuxiliaresImitacao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/AnaliseExploratoria/estatisticasClustersPrimeiraCartaJogadorMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/AnaliseExploratoria/geraGraficos.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/scriptPrimeiraCartaRoboEpe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/scriptPrimeiraCartaRoboMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/scriptTerceiraCartaRoboGanhouAsegunda.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/scriptTerceiraCartaRoboPerdeuAsegunda.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/segundaCartaRoboGanhouAprimeira.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/cartas/segundaCartaroboPerdeuAprimeiraScript.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/comando.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/envido/.Rhistory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/envido/scriptQuemGanhouEnvidoAgenteMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/envido/scriptQuemGanhouEnvidoAgentePe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/flor/clusterQuemFlorPrecisaSerConcluido.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/indexacao/indexacao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/indexacao/indexacaoPontos.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoPrimeiraMao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoPrimeiraPe.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoSegundaGanhouAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoSegundaPerdeuAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoTerceiraGanhouAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/truco/QuemTrucoTerceiraPerdeuAnterior.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/utilitarios/UtilitariosElbowEgraficosFinal.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/utilitarios/funcoesAuxiliaresAtivo.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/utilitarios/funcoesAuxiliaresDefault.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/scriptsR/utilitarios/funcoesAuxiliaresImitacao.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/selfModelingModelo/ContadorJogadasNegadas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/selfModelingModelo/ContadorPontosNegados.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/ssh/SSHReadFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/uteisRetornaQuantitativosSaldosOuProbabilidade/EspacoDePossibilidadesModelo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/uteisRetornaQuantitativosSaldosOuProbabilidade/QuantitativosEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/uteisRetornaQuantitativosSaldosOuProbabilidade/QuantitativosTruco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/utilProbabilidadeSorteio/SorteioProbabilidade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/utils/debug/PRIMEIRA CARTA FILTRADOS DO MELHOR GRUPO ESCOLHIDO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/utils/debug/criaArquivosDebug.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/utils/debug/primeiraCartaCasosFiltrados" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/validaClustersResultadoModelos/DeveAprenderModeloCluster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/validaClustersResultadoModelos/ValidaDeveAprenderContraFlor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/validaClustersResultadoModelos/ValidaDeveAprenderEnvido.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/clusterbasedgamer/validaClustersResultadoModelos/ValidaDeveAprenderJogada.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/10c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/10e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/10o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/10p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/11c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/11e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/11o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/11p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/12c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/12e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/12o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/12p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/1c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/1e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/1o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/1p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/2c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/2e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/2o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/2p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/3c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/3e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/3o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/3p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/4c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/4e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/4o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/4p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/5c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/5e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/5o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/5p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/6c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/6e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/6o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/6p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/7c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/7e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/7o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cartas/7p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/controller/ActiveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/controller/LoaderActiveLearningController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/controller/Teste2Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/loader/LoaderActiveLearning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/Deck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/Face.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/Hand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/ResponseActiveLearning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/utils/Suit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/view/activeLearningScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/view/loaderActiveLearning.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamer/ui/view/teste2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/novosTestes/Agentes4MelhoresAtivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/novosTestes/SetTeste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extra_probabilidadechance_Intra_probabilidadesorteio Cluster yes0.98% _Vs_Extra_chancesucesso_Intra_chancesucesso Cluster yes0.98%.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs_Partida_Extra_probabilidadechance_Intra_probabilidadesorteio Cluster yes Vs Extra_chancesucesso_Intra_chancesucesso cluster yes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamer/Auto/ControlaPartidaAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamer/Auto/ControlaPartidaAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamer/Auto/ControlaRodadaAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamer/Auto/ControlaRodadaAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamer/Truco/EstadoJogoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamer/Truco/EstadoJogoModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamer/ui/controller/ControllerTelaAutomatica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamer/ui/controller/ControllerTelaAutomatica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/novosTestes/ControllerAutomaticoNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/novosTestes/ControllerAutomaticoNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/novosTestes/Set1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/novosTestes/Set1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/novosTestes/SetTreinamentoImitacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/novosTestes/SetTreinamentoImitacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/treinamentoModelo/AgenteModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/treinamentoModelo/AgenteModelo.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../apps/libproxy" value="1474564616103" />
+        <entry key="$PROJECT_DIR$/../../../../apps/metropolitana" value="1476129857759" />
+        <entry key="$PROJECT_DIR$/../../../../apps/portaria" value="1465961887145" />
+        <entry key="$PROJECT_DIR$/../../../../apps/redemetro" value="1469042007495" />
+      </map>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cbrautonewgustavo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cbrautonewgustavo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f583ed8-dfa3-4d71-9e2a-bddb621fd9bb" name="Default" comment="" />
+      <created>1579009288017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579009288017</updated>
+      <workItem from="1579009290397" duration="6000" />
+      <workItem from="1581103602518" duration="83000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="89000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

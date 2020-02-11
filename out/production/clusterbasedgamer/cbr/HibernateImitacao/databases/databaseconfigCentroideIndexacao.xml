@@ -1,0 +1,8 @@
+<DataBaseConfiguration>
+	<HibernateConfigFile>cbr/HibernateImitacao/hibernate.cfg.xml</HibernateConfigFile>
+	
+	<DescriptionMappingFile>cbr/hibernateDescriptions/centroidesgrupoindexacao.hbm.xml</DescriptionMappingFile>
+	<DescriptionClassName>CentroidesGrupoIndexacaoDescription</DescriptionClassName>	
+
+
+</DataBaseConfiguration>

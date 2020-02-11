@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+	<class name="model.Player" table="players">
+
+		<id name="idPlayer" column="idPlayer">
+			<generator class="increment"/>
+		</id>
+		<property name="extraClusterReuse"/>
+		<property name="intraClusterReuse"/>
+		<property name="indCluster"/>
+		<property name="caseBase"/>
+
+	</class>
+</hibernate-mapping>

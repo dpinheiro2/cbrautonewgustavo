@@ -1,0 +1,8 @@
+<DataBaseConfiguration>
+	<HibernateConfigFile>cbr/HibernateAtivo/hibernate.cfg.xml</HibernateConfigFile>
+	
+	<DescriptionMappingFile>cbr/hibernateDescriptions/CentroidesSegundaCartaRoboPerdeuAprimeiraDescription.hbm.xml</DescriptionMappingFile>
+	<DescriptionClassName>CentroidesSegundaCartaRoboPerdeuAprimeiraDescription</DescriptionClassName>	
+
+
+</DataBaseConfiguration>
