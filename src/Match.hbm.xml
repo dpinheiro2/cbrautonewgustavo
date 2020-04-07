@@ -22,5 +22,13 @@
 			<column name="winner" not-null="false"/>
 		</many-to-one>
 
+		<set name="decisions" table="decisions"
+			 inverse="true" lazy="true" cascade="save-update" fetch="join">
+			<key>
+				<column name="idMatch" not-null="true" />
+			</key>
+			<one-to-many class="model.Decision" />
+		</set>
+
 	</class>
 </hibernate-mapping>

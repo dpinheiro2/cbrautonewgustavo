@@ -1,6 +1,8 @@
 package model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Universidade Federal de Santa Maria
@@ -20,6 +22,7 @@ public class Match implements Serializable {
     private Integer pointsPlayer1;
     private Integer pointsPlayer2;
     private Player winner;
+    private Set<Decision> decisions = new HashSet<Decision>(0);
 
     public Integer getIdMatch() {
         return idMatch;
@@ -67,5 +70,13 @@ public class Match implements Serializable {
 
     public void setWinner(Player winner) {
         this.winner = winner;
+    }
+
+    public Set<Decision> getDecisions() {
+        return decisions;
+    }
+
+    public void setDecisions(Set<Decision> decisions) {
+        this.decisions = decisions;
     }
 }

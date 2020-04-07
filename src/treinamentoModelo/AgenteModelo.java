@@ -10,6 +10,7 @@ public class AgenteModelo {
 	String TipoBase;
 	double threshold;
 	boolean recalcularCentroide;
+	boolean revisarAtivo;
 	
 
 	public AgenteModelo(String tipoReusoIntraCluster, String tipoReusoExtraCluster, String tipoAprendizagem,
@@ -23,6 +24,22 @@ public class AgenteModelo {
 		TipoBase = tipoBase;
 		this.threshold = threshold;
 		this.recalcularCentroide = recalcularCentroide;
+		this.revisarAtivo = false;
+	}
+
+	public AgenteModelo(String tipoReusoIntraCluster, String tipoReusoExtraCluster, String tipoAprendizagem,
+						String usarCluster, String tipoRetencao, String tipoBase, double threshold, boolean recalcularCentroide,
+						boolean revisarAtivo) {
+		super();
+		TipoReusoIntraCluster = tipoReusoIntraCluster;
+		TipoReusoExtraCluster = tipoReusoExtraCluster;
+		TipoAprendizagem = tipoAprendizagem;
+		UsarCluster = usarCluster;
+		TipoRetencao = tipoRetencao;
+		TipoBase = tipoBase;
+		this.threshold = threshold;
+		this.recalcularCentroide = recalcularCentroide;
+		this.revisarAtivo = revisarAtivo;
 	}
 
 	public boolean isRecalcularCentroide() {
@@ -73,7 +90,10 @@ public class AgenteModelo {
 	public void setThreshold(double threshold) {
 		this.threshold = threshold;
 	}
-	
-	
-	
+	public boolean isRevisarAtivo() {
+		return revisarAtivo;
+	}
+	public void setRevisarAtivo(boolean revisarAtivo) {
+		this.revisarAtivo = revisarAtivo;
+	}
 }

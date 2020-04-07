@@ -15,6 +15,7 @@ public class Set1 {
 //agente de 1 a 5 contra todos, sempre são removidos agentes que já jogaram
 
 	public static List<SetCbrModelo> criaConfiguracoesEntreJogadoresSet1() {
+
 		HashMap<Integer, AgenteModelo> hashDeAgentes = new Agentes().retornaHashDeAgentes();
 		List<SetCbrModelo> listaDeConfiguracoes = new ArrayList<SetCbrModelo>();
 

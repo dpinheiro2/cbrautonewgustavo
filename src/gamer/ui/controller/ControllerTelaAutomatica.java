@@ -432,6 +432,9 @@ public class ControllerTelaAutomatica {
 		String pontos = controlaRodadaAuto.pontosRodada();
 		// System.out.println("=====END HAND=====");
 		// System.out.println("=====END MATCH=====");
+		Log += "\n" + pontos + "\n\n";
+		LogPlacar += "\n" + pontos + "\n\n";
+		controlaRodadaAuto.criaDescriptionParaPersistir();
 		Match match = new Match();
 		Player player1 = ControlaPartidaAuto.getInstacia().getPlayer1();
 		Player player2 = ControlaPartidaAuto.getInstacia().getPlayer2();
@@ -443,9 +446,7 @@ public class ControllerTelaAutomatica {
 		match.setPointsPlayer2(pontosAgente2);
 		match.setWinner(pontosAgente1 > pontosAgente2 ? player1 : player2);
 		ControlaPartidaAuto.getInstacia().saveMatch(match);
-		Log += "\n" + pontos + "\n\n";
-		LogPlacar += "\n" + pontos + "\n\n";
-		controlaRodadaAuto.criaDescriptionParaPersistir();
+
 		// System.out
 		// .println("Placar " + controlaPartida.getPontosAgente1() + " X " +
 		// controlaPartida.getPontosAgente2());

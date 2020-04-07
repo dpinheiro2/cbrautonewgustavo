@@ -5,11 +5,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import CbrQuerys.CBR;
 
 import cbr.Adaptacoes.CbrModular;
+import model.Decision;
 import model.Match;
 import model.Player;
 import hibernate.utils.HibernateUtil;
@@ -18,10 +20,12 @@ import markov.RespondeMarkovEngine;
 
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import treinamentoModelo.SetCbrModelo;
 
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Set;
 
 public class ControlaPartidaAuto {
 	//sessÃ£o estatica do hibernate
@@ -37,6 +41,10 @@ public class ControlaPartidaAuto {
 
 	boolean autoAjusteCluster1 = false;
 	boolean autoAjusteCluster2 = false;
+
+   // private Set<Decision> decisions;
+	//private ArrayList<Decision> decisions;
+	Match match;
 	
 
 	public boolean isAutoAjusteCluster1() {
@@ -288,7 +296,65 @@ public class ControlaPartidaAuto {
 	public int getQuemEhMao() {
 		return (contadorRodadas % 2 == 0 ? 2 : 1);
 	}
-	
+
+	public void setCBR(String Tipo1, String Aprendizagem1, String Tipo2, String Aprendizagem2,
+					   String TipoBase1, String TipoBase2, String usarCluster1, String usarCluster2,
+					   double threshold1, double threshold2, String tipoReusoIntraCluster1, String tipoReusoIntraCluster2,
+					   boolean recalcularCentroideAgenteUm, boolean recalcularCentroideAgenteDois, boolean revisarAtivo1, boolean revisarAtivo2) {
+
+		/*if(tecnica1.equalsIgnoreCase("markov".trim())) {
+		trucoCBR1 = new RespondeMarkovEngine();
+		}*/
+		/*else {*/
+		//System.out.println("Resuso Extra 1: " +  Tipo1 + " Reuso Intra 1: "+ tipoReusoIntraCluster1  + " usar cluster: "+ usarCluster1);
+		//System.out.println("Resuso Extra 2: " +  Tipo2 + " Reuso Intra 2: "+ tipoReusoIntraCluster2  + " usar cluster: "+ usarCluster2);
+
+
+
+
+		trucoCBR1 = new CbrModular("Treinamento", TipoBase1);
+		trucoCBR1.setTipoDecisao(Tipo1, tipoReusoIntraCluster1);
+		trucoCBR1.setReusoComCluster(usarCluster1.equalsIgnoreCase("yes")? true: false );
+		trucoCBR1.setThreshold(threshold1);
+		trucoCBR1.setAprendizagem(Aprendizagem1);
+		trucoCBR1.setAjusteAutomaticoDoK(recalcularCentroideAgenteUm);
+		trucoCBR1.setRevisarAtivo(revisarAtivo1);
+		trucoCBR1.realizaConfiguracoesIniciais();
+
+
+
+
+
+		player1 = getPlayer(Tipo1, tipoReusoIntraCluster1, (usarCluster1.equalsIgnoreCase("yes")? 1 : 0),
+				TipoBase1);
+
+		System.out.println("Player1: " + player1.toString() + "--> Aprendizado: " + Aprendizagem1);
+
+		/*}*/
+	/*	if(tecnica2.equalsIgnoreCase("markov".trim())) {
+			trucoCBR2 = new RespondeMarkovEngine();
+		}else {*/
+
+
+		trucoCBR2 = new CbrModular("Treinamento", TipoBase2);
+		trucoCBR2.setTipoDecisao(Tipo2,  tipoReusoIntraCluster2 );
+		trucoCBR2.setReusoComCluster(usarCluster2.equalsIgnoreCase("yes")?true : false);
+		trucoCBR2.setThreshold(threshold2);
+		trucoCBR2.setAprendizagem(Aprendizagem2);
+		trucoCBR2.setAjusteAutomaticoDoK(recalcularCentroideAgenteDois);
+		trucoCBR2.setRevisarAtivo(revisarAtivo2);
+		trucoCBR2.realizaConfiguracoesIniciais();
+
+
+
+
+		player2 = getPlayer(Tipo2, tipoReusoIntraCluster2, (usarCluster2.equalsIgnoreCase("yes")? 1 : 0),
+				TipoBase2);
+
+		System.out.println("Player2: " + player2.toString()+ "--> Aprendizado: " + Aprendizagem2);
+		/*}*/
+	}
+
 
 	public void setCBR(String Tipo1, String Aprendizagem1, String Tipo2, String Aprendizagem2,
 					   String TipoBase1, String TipoBase2, String usarCluster1, String usarCluster2,
@@ -343,6 +409,7 @@ public class ControlaPartidaAuto {
 	}
 
 	public void novaPartida(int PartidaNumber) {
+
 		adicionaPartida();
 		contadorRodadas = 0;
 		pontosAgente2 = 0;
@@ -379,6 +446,7 @@ public class ControlaPartidaAuto {
 		countBluff4ShowDown = 0;
 		countBluff5ShowDown = 0;
 		countBluff6ShowDown = 0;
+
 	}
 
 public void fecharBases() {
@@ -483,6 +551,23 @@ public void fecharBases() {
 	}
 
 	public void saveMatch(Match match) {
+
+		try {
+			if(session == null || !session.isOpen()) session = HibernateUtil.getSessionFactory().openSession();
+			session.beginTransaction();
+			session.save(match);
+			session.getTransaction().commit();
+			//System.out.println("Partida inserida com sucesso!");
+
+			if(session.isOpen() ) session.close();
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void saveMatch() {
 		try {
 			if(session == null || !session.isOpen()) session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
@@ -715,5 +800,13 @@ public void fecharBases() {
 
 	public void setCountBluff6ShowDown(int countBluff6ShowDown) {
 		this.countBluff6ShowDown = countBluff6ShowDown;
+	}
+
+    public Match getMatch() {
+		return match;
+	}
+
+	public void setMatch(Match match) {
+		this.match = match;
 	}
 }

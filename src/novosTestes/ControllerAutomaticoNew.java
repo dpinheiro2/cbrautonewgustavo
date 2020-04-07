@@ -39,6 +39,9 @@ public class ControllerAutomaticoNew {
 	boolean recalcularCentroidesUm;
 	boolean recalcularCentroidesDois;
 
+	boolean revisarAtivo1;
+	boolean revisarAtivo2;
+
 	private String inicioPartida;
 	private String finalPartida;
 
@@ -68,12 +71,16 @@ public class ControllerAutomaticoNew {
 		recalcularCentroidesUm = set.getRecalculaCentroideAgenteUm();
 		recalcularCentroidesDois = set.getRecalculaCentroideAgenteDois();
 
+		revisarAtivo1 = set.getAgenteModelo1().isRevisarAtivo();
+		revisarAtivo2 = set.getAgenteModelo2().isRevisarAtivo();
+
+
 		numeroDePartidasSolicitadas = (NumeroPartidas == 0) ? 1 : NumeroPartidas;
 
 
-		//while (contadorPartidas <= numeroDePartidasSolicitadas) {
+		while (contadorPartidas <= numeroDePartidasSolicitadas) {
 			controlaPartida.setCBR(TipoReuso1, TipoAprendizagem1, TipoReuso2, TipoAprendizagem2, TipoBase1, TipoBase2, UsarCluster1, UsarCluster2, threshold1, threshold2, TipoReusoIntra1, TipoReusoIntra2,
-					recalcularCentroidesUm, recalcularCentroidesDois);
+					recalcularCentroidesUm, recalcularCentroidesDois, revisarAtivo1, revisarAtivo2);
 			controlaPartida.setaUltimoId(TipoReuso1, TipoAprendizagem1,  TipoBase1, TipoReuso2, TipoAprendizagem2,
 					TipoBase2,UsarCluster1, UsarCluster2, TipoReusoIntra1, TipoReusoIntra2);
 
@@ -81,11 +88,12 @@ public class ControllerAutomaticoNew {
 			novaPartida(contadorPartidas);
 			controlaPartida.fecharBases();
 
-		//}
+		}
 
 	}
 
 	public void novaPartida(int PartidaNumber) {
+        ControlaPartidaAuto.getInstacia().setMatch(new Match());
 		inicioPartida = getDateTime();
 		controlaPartida.novaPartida(PartidaNumber);
 		System.out.println("|||||||||||||||||||||||||||||||||||||||||||||");
@@ -95,7 +103,7 @@ public class ControllerAutomaticoNew {
 
 	private void IniciaRodada() {
 		System.out.println("*********************************************");
-		System.out.println("START_HAND " + "Nr. " + (controlaPartida.getRodadaNumber() + 1) + " - Hand Player: " + (controlaPartida.getQuemEhMao() == 1 ? 2 : 1));
+		System.out.println("START_HAND " + "Nr. " + (controlaPartida.getRodadaNumber()) + " - Hand Player: " + (controlaPartida.getQuemEhMao() == 1 ? 2 : 1));
 		controlaRodadaAuto = new ControlaRodadaAuto();
 		controlaPartida.novaRodada();
 		//Log += controlaRodadaAuto.getCartas();
@@ -221,20 +229,21 @@ public class ControllerAutomaticoNew {
 		String pontos = controlaRodadaAuto.pontosRodada();
 		//System.out.println("=====END HAND=====");
 		//System.out.println("=====END MATCH=====");
-		Match match = new Match();
+		Log += "\n" + pontos + "\n\n";
+		LogPlacar += "\n" + pontos + "\n\n";
+		controlaRodadaAuto.setResultToEachDecision();
+		controlaRodadaAuto.criaDescriptionParaPersistir();
 		Player player1 = ControlaPartidaAuto.getInstacia().getPlayer1();
 		Player player2 = ControlaPartidaAuto.getInstacia().getPlayer2();
 		int pontosAgente1 = ControlaPartidaAuto.getInstacia().getPontosAgente1();
 		int pontosAgente2 = ControlaPartidaAuto.getInstacia().getPontosAgente2();
-		match.setPlayer1(player1);
-		match.setPlayer2(player2);
-		match.setPointsPlayer1(pontosAgente1);
-		match.setPointsPlayer2(pontosAgente2);
-		match.setWinner(pontosAgente1 > pontosAgente2 ? player1 : player2);
-		ControlaPartidaAuto.getInstacia().saveMatch(match);
-		Log += "\n" + pontos + "\n\n";
-		LogPlacar += "\n" + pontos + "\n\n";
-		controlaRodadaAuto.criaDescriptionParaPersistir();
+        ControlaPartidaAuto.getInstacia().getMatch().setPlayer1(player1);
+        ControlaPartidaAuto.getInstacia().getMatch().setPlayer2(player2);
+        ControlaPartidaAuto.getInstacia().getMatch().setPointsPlayer1(pontosAgente1);
+        ControlaPartidaAuto.getInstacia().getMatch().setPointsPlayer2(pontosAgente2);
+        ControlaPartidaAuto.getInstacia().getMatch().setWinner(pontosAgente1 > pontosAgente2 ? player1 : player2);
+		ControlaPartidaAuto.getInstacia().saveMatch();
+
 		System.out.println("|||||||||||||||||||||||||||||||||||||||||||||");
 		System.out.println("FINISH_MATCH " + "Nr. " + controlaPartida.getPartidaNumber() + " - " + getDateTime());
 		//System.out.println("Placar   " + controlaPartida.getPontosAgente1() + " X " + controlaPartida.getPontosAgente2());
@@ -247,24 +256,23 @@ public class ControllerAutomaticoNew {
 		controlaRodadaAuto.pontuaQuemGanhouArodada();
 		String pontos = controlaRodadaAuto.pontosRodada();
 		//System.out.println("=====END HAND=====");
-
+		controlaRodadaAuto.setResultToEachDecision();
 		controlaRodadaAuto.criaDescriptionParaPersistir();
 
 		controlaRodadaAuto.atualizaScoutBlefesRealizadosAgente();
 		controlaRodadaAuto.atualizaScoutBlefesPlotadosOpponente();
 
 		if (!controlaPartida.isTemMaisRodada()) {
-			Match match = new Match();
 			Player player1 = ControlaPartidaAuto.getInstacia().getPlayer1();
 			Player player2 = ControlaPartidaAuto.getInstacia().getPlayer2();
 			int pontosAgente1 = ControlaPartidaAuto.getInstacia().getPontosAgente1();
 			int pontosAgente2 = ControlaPartidaAuto.getInstacia().getPontosAgente2();
-			match.setPlayer1(player1);
-			match.setPlayer2(player2);
-			match.setPointsPlayer1(pontosAgente1);
-			match.setPointsPlayer2(pontosAgente2);
-			match.setWinner(pontosAgente1 > pontosAgente2 ? player1 : player2);
-			ControlaPartidaAuto.getInstacia().saveMatch(match);
+            ControlaPartidaAuto.getInstacia().getMatch().setPlayer1(player1);
+            ControlaPartidaAuto.getInstacia().getMatch().setPlayer2(player2);
+            ControlaPartidaAuto.getInstacia().getMatch().setPointsPlayer1(pontosAgente1);
+            ControlaPartidaAuto.getInstacia().getMatch().setPointsPlayer2(pontosAgente2);
+            ControlaPartidaAuto.getInstacia().getMatch().setWinner(pontosAgente1 > pontosAgente2 ? player1 : player2);
+            ControlaPartidaAuto.getInstacia().saveMatch();
 		} else {
 			IniciaRodada();
 		}

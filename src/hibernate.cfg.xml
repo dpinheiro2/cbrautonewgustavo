@@ -17,6 +17,7 @@
 
         <mapping resource="Player.hbm.xml" />
         <mapping resource="Match.hbm.xml" />
+        <mapping resource="Decision.hbm.xml" />
 
     </session-factory>
 </hibernate-configuration>

@@ -40,7 +40,7 @@ public class LoaderActiveLearningController {
 
         btnPlay.setOnAction((event) -> {
 
-            int numeroExecucoes = 100;
+            int numeroExecucoes = 2;
 
             Agentes4MelhoresAtivo agentes = new Agentes4MelhoresAtivo();
             HashMap<Integer, AgenteModelo> agentesParaAprender = agentes.retornaHashDeAgentesParaAprender();
@@ -54,8 +54,6 @@ public class LoaderActiveLearningController {
                 int agenteSorteadoNaoAprender = randomNaoAprender.nextInt(4) + 1;
                 AgenteModelo agenteUm = agentesParaAprender.get(agenteSorteadoAprender);
                 AgenteModelo agenteDois = agentesParaNaoAprender.get(agenteSorteadoNaoAprender);
-                agenteUm.setTipoAprendizagem("ativo");
-                agenteUm.setTipoBase("ativo");
                 SetCbrModelo setTreinamento = new SetCbrModelo(agenteUm, agenteDois);
                 controllerAutomaticoNew = new ControllerAutomaticoNew();
                 controllerAutomaticoNew.Treinar(setTreinamento, 1);

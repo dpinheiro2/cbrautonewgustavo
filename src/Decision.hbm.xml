@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="model.Decision" table="decisions">
+
+        <id name="idDecision" column="idDecision">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="match" class="model.Match" fetch="join">
+            <column name="idMatch" not-null="true"/>
+        </many-to-one>
+
+        <many-to-one name="player" class="model.Player" fetch="join">
+            <column name="idPlayer" not-null="false"/>
+        </many-to-one>
+
+        <property name="handNumber"/>
+        <property name="agenteScore"/>
+        <property name="oponenteScore"/>
+        <property name="envidoHandStrength"/>
+        <property name="probWin"/>
+        <property name="stateDecision"/>
+        <property name="lastMove"/>
+        <property name="bluff1Success"/>
+        <property name="bluff2Success"/>
+        <property name="bluff3Success"/>
+        <property name="bluff4Success"/>
+        <property name="bluff5Success"/>
+        <property name="bluff6Success"/>
+        <property name="bluff1Failure"/>
+        <property name="bluff2Failure"/>
+        <property name="bluff3Failure"/>
+        <property name="bluff4Failure"/>
+        <property name="bluff5Failure"/>
+        <property name="bluff6Failure"/>
+        <property name="bluff1Opponent"/>
+        <property name="bluff2Opponent"/>
+        <property name="bluff3Opponent"/>
+        <property name="bluff4Opponent"/>
+        <property name="bluff5Opponent"/>
+        <property name="bluff6Opponent"/>
+        <property name="bluff1ShowDown"/>
+        <property name="bluff2ShowDown"/>
+        <property name="bluff3ShowDown"/>
+        <property name="bluff4ShowDown"/>
+        <property name="bluff5ShowDown"/>
+        <property name="bluff6ShowDown"/>
+        <property name="typeAction"/>
+        <property name="typeDecision"/>
+        <property name="decision"/>
+        <property name="isBluff"/>
+        <property name="typeBluff"/>
+        <property name="indSuccess"/>
+        <property name="possiblePoints"/>
+        <property name="achievedPoints"/>
+        <property name="isActiveLearning"/>
+        <property name="bluffCanBeDetected"/>
+        <property name="bluffDetectedOpponent"/>
+
+    </class>
+</hibernate-mapping>

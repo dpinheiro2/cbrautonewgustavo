@@ -15,7 +15,7 @@ public class GeraCartas {
 
 	private static List<CartasModelo> Cartas1;
 	private static List<CartasModelo> Cartas2;
-	private static String diretorio ="/home/gustavo/Mestrado/CodigoDissertacao/cbrautonewGustavo/src/outros/Geradas/";
+	private static String diretorio ="C:/ufsm/logs/";
 	static void darCartas() {
 
 		Cartas1 = new ArrayList<CartasModelo>();

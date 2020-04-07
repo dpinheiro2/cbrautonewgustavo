@@ -8,7 +8,7 @@ import java.util.List;
 import cbr.AtualizaConsultas.AuxiliaConsultas.JogadasAceitasModelo;
 import cbr.AtualizaConsultas.AuxiliaConsultas.JogadasChamadasModelo;
 import cbr.AtualizaConsultas.AuxiliaConsultas.JogadasQuePodemSerAceitasModelo;
-import gamer.ui.utils.Action;
+import utils.Action;
 
 public class EstadoJogoModelo {
 
