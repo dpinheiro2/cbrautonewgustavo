@@ -28,60 +28,30 @@ import java.nio.file.Paths;
 import java.util.Set;
 
 public class ControlaPartidaAuto {
-	//sessÃ£o estatica do hibernate
- static	Session session = null;
-	
-	Player player1;
-	Player player2;
-	CbrModular trucoCBR1;
-	CbrModular trucoCBR2;
-	
-	String tecnica1 = "";
-	String tecnica2="";
 
-	boolean autoAjusteCluster1 = false;
-	boolean autoAjusteCluster2 = false;
-
-   // private Set<Decision> decisions;
-	//private ArrayList<Decision> decisions;
-	Match match;
-	
-
-	public boolean isAutoAjusteCluster1() {
-		return autoAjusteCluster1;
+	public static ControlaPartidaAuto getControlaPartidaAuto() {
+		return controlaPartidaAuto;
 	}
 
-	public void setAutoAjusteCluster1(boolean autoAjusteCluster1) {
-		this.autoAjusteCluster1 = autoAjusteCluster1;
-		trucoCBR1.setAjusteAutomaticoDoK(autoAjusteCluster1);
+	public static void setControlaPartidaAuto(ControlaPartidaAuto controlaPartidaAuto) {
+		ControlaPartidaAuto.controlaPartidaAuto = controlaPartidaAuto;
 	}
 
-	public boolean isAutoAjusteCluster2() {
-		return autoAjusteCluster2;
-	}
+	static	Session session = null;
 
-	public void setAutoAjusteCluster2(boolean autoAjusteCluster2) {
-		this.autoAjusteCluster2 = autoAjusteCluster2;
-		trucoCBR2.setAjusteAutomaticoDoK(autoAjusteCluster2);
-	}
+	private Player player1;
+	private Player player2;
+	private CbrModular trucoCBR1;
+	private CbrModular trucoCBR2;
 
-	public String getTecnica1() {
-		return tecnica1;
-	}
+	private String tecnica1 = "";
+	private String tecnica2="";
 
-	public void setTecnica1(String tecnica1) {
-		this.tecnica1 = tecnica1;
-	}
+	private boolean autoAjusteCluster1 = false;
+	private boolean autoAjusteCluster2 = false;
 
-	public String getTecnica2() {
-		return tecnica2;
-	}
+	private Match match;
 
-	public void setTecnica2(String tecnica2) {
-		this.tecnica2 = tecnica2;
-	}
-
-	// atributos classe
 	private int contadorRodadas = 0;
 	private int pontosAgente2 = 0;
 	private int pontosAgente1 = 0;
@@ -118,13 +88,12 @@ public class ControlaPartidaAuto {
 	private int countBluff5ShowDown = 0;
 	private int countBluff6ShowDown = 0;
 
-
-
 	private static int LastIdArquivo = 0;
 
 	private static String pathHistoricoPontos = "src/Logs/historicoPlacares.txt";
 
 	private List<String> listaRodadas = new ArrayList<String>();
+
 	// classe padrÃ£o singleton
 	public static ControlaPartidaAuto controlaPartidaAuto = null;
 
@@ -145,11 +114,47 @@ public class ControlaPartidaAuto {
 			controlaPartidaAuto = new ControlaPartidaAuto();
 		return controlaPartidaAuto;
 	}
+
 	public static ControlaPartidaAuto mataInstacia() {
 
 			controlaPartidaAuto = new ControlaPartidaAuto();
 		return controlaPartidaAuto;
 	}
+
+	public boolean isAutoAjusteCluster1() {
+		return autoAjusteCluster1;
+	}
+
+	public void setAutoAjusteCluster1(boolean autoAjusteCluster1) {
+		this.autoAjusteCluster1 = autoAjusteCluster1;
+		trucoCBR1.setAjusteAutomaticoDoK(autoAjusteCluster1);
+	}
+
+	public boolean isAutoAjusteCluster2() {
+		return autoAjusteCluster2;
+	}
+
+	public void setAutoAjusteCluster2(boolean autoAjusteCluster2) {
+		this.autoAjusteCluster2 = autoAjusteCluster2;
+		trucoCBR2.setAjusteAutomaticoDoK(autoAjusteCluster2);
+	}
+
+	public String getTecnica1() {
+		return tecnica1;
+	}
+
+	public void setTecnica1(String tecnica1) {
+		this.tecnica1 = tecnica1;
+	}
+
+	public String getTecnica2() {
+		return tecnica2;
+	}
+
+	public void setTecnica2(String tecnica2) {
+		this.tecnica2 = tecnica2;
+	}
+
 	public Player getPlayer1() {
 		return player1;
 	}
@@ -285,12 +290,204 @@ public class ControlaPartidaAuto {
 		this.listaRodadas = listaRodadas;
 	}
 
-	public static ControlaPartidaAuto getControlaPartidaAuto() {
-		return controlaPartidaAuto;
+	public int getCountBluff1Success() {
+		return countBluff1Success;
 	}
 
-	public static void setControlaPartidaAuto(ControlaPartidaAuto controlaPartidaAuto) {
-		ControlaPartidaAuto.controlaPartidaAuto = controlaPartidaAuto;
+	public void setCountBluff1Success(int countBluff1Success) {
+		this.countBluff1Success = countBluff1Success;
+	}
+
+	public int getCountBluff2Success() {
+		return countBluff2Success;
+	}
+
+	public void setCountBluff2Success(int countBluff2Success) {
+		this.countBluff2Success = countBluff2Success;
+	}
+
+	public int getCountBluff3Success() {
+		return countBluff3Success;
+	}
+
+	public void setCountBluff3Success(int countBluff3Success) {
+		this.countBluff3Success = countBluff3Success;
+	}
+
+	public int getCountBluff4Success() {
+		return countBluff4Success;
+	}
+
+	public void setCountBluff4Success(int countBluff4Success) {
+		this.countBluff4Success = countBluff4Success;
+	}
+
+	public int getCountBluff5Success() {
+		return countBluff5Success;
+	}
+
+	public void setCountBluff5Success(int countBluff5Success) {
+		this.countBluff5Success = countBluff5Success;
+	}
+
+	public int getCountBluff6Success() {
+		return countBluff6Success;
+	}
+
+	public void setCountBluff6Success(int countBluff6Success) {
+		this.countBluff6Success = countBluff6Success;
+	}
+
+	public int getCountBluff1Failure() {
+		return countBluff1Failure;
+	}
+
+	public void setCountBluff1Failure(int countBluff1Failure) {
+		this.countBluff1Failure = countBluff1Failure;
+	}
+
+	public int getCountBluff2Failure() {
+		return countBluff2Failure;
+	}
+
+	public void setCountBluff2Failure(int countBluff2Failure) {
+		this.countBluff2Failure = countBluff2Failure;
+	}
+
+	public int getCountBluff3Failure() {
+		return countBluff3Failure;
+	}
+
+	public void setCountBluff3Failure(int countBluff3Failure) {
+		this.countBluff3Failure = countBluff3Failure;
+	}
+
+	public int getCountBluff4Failure() {
+		return countBluff4Failure;
+	}
+
+	public void setCountBluff4Failure(int countBluff4Failure) {
+		this.countBluff4Failure = countBluff4Failure;
+	}
+
+	public int getCountBluff5Failure() {
+		return countBluff5Failure;
+	}
+
+	public void setCountBluff5Failure(int countBluff5Failure) {
+		this.countBluff5Failure = countBluff5Failure;
+	}
+
+	public int getCountBluff6Failure() {
+		return countBluff6Failure;
+	}
+
+	public void setCountBluff6Failure(int countBluff6Failure) {
+		this.countBluff6Failure = countBluff6Failure;
+	}
+
+	public int getCountBluff1Opponent() {
+		return countBluff1Opponent;
+	}
+
+	public void setCountBluff1Opponent(int countBluff1Opponent) {
+		this.countBluff1Opponent = countBluff1Opponent;
+	}
+
+	public int getCountBluff2Opponent() {
+		return countBluff2Opponent;
+	}
+
+	public void setCountBluff2Opponent(int countBluff2Opponent) {
+		this.countBluff2Opponent = countBluff2Opponent;
+	}
+
+	public int getCountBluff3Opponent() {
+		return countBluff3Opponent;
+	}
+
+	public void setCountBluff3Opponent(int countBluff3Opponent) {
+		this.countBluff3Opponent = countBluff3Opponent;
+	}
+
+	public int getCountBluff4Opponent() {
+		return countBluff4Opponent;
+	}
+
+	public void setCountBluff4Opponent(int countBluff4Opponent) {
+		this.countBluff4Opponent = countBluff4Opponent;
+	}
+
+	public int getCountBluff5Opponent() {
+		return countBluff5Opponent;
+	}
+
+	public void setCountBluff5Opponent(int countBluff5Opponent) {
+		this.countBluff5Opponent = countBluff5Opponent;
+	}
+
+	public int getCountBluff6Opponent() {
+		return countBluff6Opponent;
+	}
+
+	public void setCountBluff6Opponent(int countBluff6Opponent) {
+		this.countBluff6Opponent = countBluff6Opponent;
+	}
+
+	public int getCountBluff1ShowDown() {
+		return countBluff1ShowDown;
+	}
+
+	public void setCountBluff1ShowDown(int countBluff1ShowDown) {
+		this.countBluff1ShowDown = countBluff1ShowDown;
+	}
+
+	public int getCountBluff2ShowDown() {
+		return countBluff2ShowDown;
+	}
+
+	public void setCountBluff2ShowDown(int countBluff2ShowDown) {
+		this.countBluff2ShowDown = countBluff2ShowDown;
+	}
+
+	public int getCountBluff3ShowDown() {
+		return countBluff3ShowDown;
+	}
+
+	public void setCountBluff3ShowDown(int countBluff3ShowDown) {
+		this.countBluff3ShowDown = countBluff3ShowDown;
+	}
+
+	public int getCountBluff4ShowDown() {
+		return countBluff4ShowDown;
+	}
+
+	public void setCountBluff4ShowDown(int countBluff4ShowDown) {
+		this.countBluff4ShowDown = countBluff4ShowDown;
+	}
+
+	public int getCountBluff5ShowDown() {
+		return countBluff5ShowDown;
+	}
+
+	public void setCountBluff5ShowDown(int countBluff5ShowDown) {
+		this.countBluff5ShowDown = countBluff5ShowDown;
+	}
+
+	public int getCountBluff6ShowDown() {
+		return countBluff6ShowDown;
+	}
+
+	public void setCountBluff6ShowDown(int countBluff6ShowDown) {
+		this.countBluff6ShowDown = countBluff6ShowDown;
+	}
+
+	public Match getMatch() {
+		return match;
+	}
+
+	public void setMatch(Match match) {
+		this.match = match;
 	}
 
 	public int getQuemEhMao() {
@@ -306,11 +503,6 @@ public class ControlaPartidaAuto {
 		trucoCBR1 = new RespondeMarkovEngine();
 		}*/
 		/*else {*/
-		//System.out.println("Resuso Extra 1: " +  Tipo1 + " Reuso Intra 1: "+ tipoReusoIntraCluster1  + " usar cluster: "+ usarCluster1);
-		//System.out.println("Resuso Extra 2: " +  Tipo2 + " Reuso Intra 2: "+ tipoReusoIntraCluster2  + " usar cluster: "+ usarCluster2);
-
-
-
 
 		trucoCBR1 = new CbrModular("Treinamento", TipoBase1);
 		trucoCBR1.setTipoDecisao(Tipo1, tipoReusoIntraCluster1);
@@ -320,10 +512,6 @@ public class ControlaPartidaAuto {
 		trucoCBR1.setAjusteAutomaticoDoK(recalcularCentroideAgenteUm);
 		trucoCBR1.setRevisarAtivo(revisarAtivo1);
 		trucoCBR1.realizaConfiguracoesIniciais();
-
-
-
-
 
 		player1 = getPlayer(Tipo1, tipoReusoIntraCluster1, (usarCluster1.equalsIgnoreCase("yes")? 1 : 0),
 				TipoBase1);
@@ -345,14 +533,11 @@ public class ControlaPartidaAuto {
 		trucoCBR2.setRevisarAtivo(revisarAtivo2);
 		trucoCBR2.realizaConfiguracoesIniciais();
 
-
-
-
 		player2 = getPlayer(Tipo2, tipoReusoIntraCluster2, (usarCluster2.equalsIgnoreCase("yes")? 1 : 0),
 				TipoBase2);
 
 		System.out.println("Player2: " + player2.toString()+ "--> Aprendizado: " + Aprendizagem2);
-		/*}*/
+
 	}
 
 
@@ -449,7 +634,7 @@ public class ControlaPartidaAuto {
 
 	}
 
-public void fecharBases() {
+	public void fecharBases() {
 	try {
 		trucoCBR1.fechaBase();
 		trucoCBR2.fechaBase();
@@ -610,203 +795,4 @@ public void fecharBases() {
 		}
 	}
 
-    public int getCountBluff1Success() {
-        return countBluff1Success;
-    }
-
-    public void setCountBluff1Success(int countBluff1Success) {
-        this.countBluff1Success = countBluff1Success;
-    }
-
-    public int getCountBluff2Success() {
-        return countBluff2Success;
-    }
-
-    public void setCountBluff2Success(int countBluff2Success) {
-        this.countBluff2Success = countBluff2Success;
-    }
-
-    public int getCountBluff3Success() {
-        return countBluff3Success;
-    }
-
-    public void setCountBluff3Success(int countBluff3Success) {
-        this.countBluff3Success = countBluff3Success;
-    }
-
-    public int getCountBluff4Success() {
-        return countBluff4Success;
-    }
-
-    public void setCountBluff4Success(int countBluff4Success) {
-        this.countBluff4Success = countBluff4Success;
-    }
-
-    public int getCountBluff5Success() {
-        return countBluff5Success;
-    }
-
-    public void setCountBluff5Success(int countBluff5Success) {
-        this.countBluff5Success = countBluff5Success;
-    }
-
-    public int getCountBluff6Success() {
-        return countBluff6Success;
-    }
-
-    public void setCountBluff6Success(int countBluff6Success) {
-        this.countBluff6Success = countBluff6Success;
-    }
-
-    public int getCountBluff1Failure() {
-        return countBluff1Failure;
-    }
-
-    public void setCountBluff1Failure(int countBluff1Failure) {
-        this.countBluff1Failure = countBluff1Failure;
-    }
-
-    public int getCountBluff2Failure() {
-        return countBluff2Failure;
-    }
-
-    public void setCountBluff2Failure(int countBluff2Failure) {
-        this.countBluff2Failure = countBluff2Failure;
-    }
-
-    public int getCountBluff3Failure() {
-        return countBluff3Failure;
-    }
-
-    public void setCountBluff3Failure(int countBluff3Failure) {
-        this.countBluff3Failure = countBluff3Failure;
-    }
-
-    public int getCountBluff4Failure() {
-        return countBluff4Failure;
-    }
-
-    public void setCountBluff4Failure(int countBluff4Failure) {
-        this.countBluff4Failure = countBluff4Failure;
-    }
-
-    public int getCountBluff5Failure() {
-        return countBluff5Failure;
-    }
-
-    public void setCountBluff5Failure(int countBluff5Failure) {
-        this.countBluff5Failure = countBluff5Failure;
-    }
-
-    public int getCountBluff6Failure() {
-        return countBluff6Failure;
-    }
-
-    public void setCountBluff6Failure(int countBluff6Failure) {
-        this.countBluff6Failure = countBluff6Failure;
-    }
-
-	public int getCountBluff1Opponent() {
-		return countBluff1Opponent;
-	}
-
-	public void setCountBluff1Opponent(int countBluff1Opponent) {
-		this.countBluff1Opponent = countBluff1Opponent;
-	}
-
-	public int getCountBluff2Opponent() {
-		return countBluff2Opponent;
-	}
-
-	public void setCountBluff2Opponent(int countBluff2Opponent) {
-		this.countBluff2Opponent = countBluff2Opponent;
-	}
-
-	public int getCountBluff3Opponent() {
-		return countBluff3Opponent;
-	}
-
-	public void setCountBluff3Opponent(int countBluff3Opponent) {
-		this.countBluff3Opponent = countBluff3Opponent;
-	}
-
-	public int getCountBluff4Opponent() {
-		return countBluff4Opponent;
-	}
-
-	public void setCountBluff4Opponent(int countBluff4Opponent) {
-		this.countBluff4Opponent = countBluff4Opponent;
-	}
-
-	public int getCountBluff5Opponent() {
-		return countBluff5Opponent;
-	}
-
-	public void setCountBluff5Opponent(int countBluff5Opponent) {
-		this.countBluff5Opponent = countBluff5Opponent;
-	}
-
-	public int getCountBluff6Opponent() {
-		return countBluff6Opponent;
-	}
-
-	public void setCountBluff6Opponent(int countBluff6Opponent) {
-		this.countBluff6Opponent = countBluff6Opponent;
-	}
-
-	public int getCountBluff1ShowDown() {
-		return countBluff1ShowDown;
-	}
-
-	public void setCountBluff1ShowDown(int countBluff1ShowDown) {
-		this.countBluff1ShowDown = countBluff1ShowDown;
-	}
-
-	public int getCountBluff2ShowDown() {
-		return countBluff2ShowDown;
-	}
-
-	public void setCountBluff2ShowDown(int countBluff2ShowDown) {
-		this.countBluff2ShowDown = countBluff2ShowDown;
-	}
-
-	public int getCountBluff3ShowDown() {
-		return countBluff3ShowDown;
-	}
-
-	public void setCountBluff3ShowDown(int countBluff3ShowDown) {
-		this.countBluff3ShowDown = countBluff3ShowDown;
-	}
-
-	public int getCountBluff4ShowDown() {
-		return countBluff4ShowDown;
-	}
-
-	public void setCountBluff4ShowDown(int countBluff4ShowDown) {
-		this.countBluff4ShowDown = countBluff4ShowDown;
-	}
-
-	public int getCountBluff5ShowDown() {
-		return countBluff5ShowDown;
-	}
-
-	public void setCountBluff5ShowDown(int countBluff5ShowDown) {
-		this.countBluff5ShowDown = countBluff5ShowDown;
-	}
-
-	public int getCountBluff6ShowDown() {
-		return countBluff6ShowDown;
-	}
-
-	public void setCountBluff6ShowDown(int countBluff6ShowDown) {
-		this.countBluff6ShowDown = countBluff6ShowDown;
-	}
-
-    public Match getMatch() {
-		return match;
-	}
-
-	public void setMatch(Match match) {
-		this.match = match;
-	}
 }

@@ -7,7 +7,9 @@ import treinamentoModelo.AgenteModelo;
 public class Agentes {
 
 	public HashMap<Integer, AgenteModelo> retornaHashDeAgentes(){
+
 		HashMap<Integer, AgenteModelo> hashAgentes = new HashMap<Integer, AgenteModelo>();
+
 		AgenteModelo agente1 = new AgenteModelo("probabilidadechance", "probabilidadechance", "Nenhum", "yes", "nada", "baseline", 0.75, false);
 		hashAgentes.put(1, agente1);
 		

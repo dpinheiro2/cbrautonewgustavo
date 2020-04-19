@@ -58,28 +58,6 @@ public class LoaderActiveLearningController {
                 controllerAutomaticoNew = new ControllerAutomaticoNew();
                 controllerAutomaticoNew.Treinar(setTreinamento, 1);
             }
-
-
-            //LoaderActiveLearning.openTeste2Screen();
-
-            //Selecionadas as melhores configurações conforme os testes do gustavo. Agent = Melhor - Opponent = Segundo Melhor
-           /* AgenteModelo agent = new AgenteModelo("chancesucesso", "probabilidadechance", "Nenhum", "yes", "nada", "ativo", 0.75, false);
-            AgenteModelo opponent = new AgenteModelo("chancesucesso", "chancesucesso", "Nenhum", "no", "nada", "baseline", 0.75, false);
-
-            SetCbrModelo configuracaoMatch = new SetCbrModelo(agent, opponent);*/
-
-            //System.out.println("Iniciou");
-
-           /* int numeroDePartidas = 0;
-
-            ControlaPartidaAuto.controlaPartidaAuto = null;
-            controllerAutomaticoNew = new ControllerAutomaticoNew();
-            controllerAutomaticoNew.Treinar(configuracaoMatch, numeroDePartidas);*/
-
-            //System.out.println("terminou");
-
-            /*Stage stage = (Stage) btnPlay.getScene().getWindow();
-            stage.close();*/
         });
 
     }
