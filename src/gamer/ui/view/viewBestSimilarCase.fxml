@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamer.ui.controller.CaseDetailsController">
+   <children>
+      <GridPane hgap="10.0" layoutX="185.0" layoutY="109.0" prefHeight="550.0" prefWidth="600.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="234.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="342.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblSimilaridade" text="Similaridade:" />
+            <Label fx:id="lblCaseId" text="Case Id:" GridPane.rowIndex="1" />
+            <Label fx:id="lbljogadorMao" text="Jogador Mão:" GridPane.rowIndex="2" />
+            <Label fx:id="lblcartaAltaAgente" text="Carta Media Agente:" GridPane.rowIndex="4" />
+            <Label fx:id="lblcartaMediaAgente" text="Carta Media Agente:" GridPane.rowIndex="5" />
+            <Label fx:id="lblcartaBaixaAgente" text="Carta Baixa Agente:" GridPane.rowIndex="6" />
+            <Label fx:id="lblPontosEnvidoAgente" text="Pontos Envido Agente:" GridPane.rowIndex="3" />
+            <Label fx:id="lblPontuacaoAgente" text="Pontos Anteriores/Posteriores Agente:" GridPane.rowIndex="7" />
+            <Label fx:id="lblPontuacaoOponente" text="Pontos Anteriores/Posteriores Oponente:" GridPane.rowIndex="8" />
+            <Label fx:id="lblCartasJogadasAgente" text="Cartas Jogadas Agente:" GridPane.rowIndex="9" />
+            <Label fx:id="lblCartasJogadasOponente" text="Cartas Jogadas Oponente:" GridPane.rowIndex="10" />
+            <Label fx:id="lblGanhadoresRodadas" text="Ganhadores Rodadas:" GridPane.rowIndex="11" />
+            <Label fx:id="lblEnvido" text="Quem Envido:" GridPane.rowIndex="12" />
+            <Label fx:id="lblRealEnvido" text="Quem Real Envido:" GridPane.rowIndex="13" />
+            <Label fx:id="lblFaltaEnvido" text="Quem Falta Envido:" GridPane.rowIndex="14" />
+            <Label fx:id="lblNegouEnvido" text="Quem Negou Envido:" GridPane.rowIndex="15" />
+            <Label fx:id="lblTruco" text="Quem Truco:" GridPane.rowIndex="16" />
+            <Label fx:id="lblRetruco" text="Quem Retruco:" GridPane.rowIndex="17" />
+            <Label fx:id="lblVale4" text="Quem Vale 4:" GridPane.rowIndex="18" />
+            <Label fx:id="lblNegouTruco" text="Quem Negou Truco:" GridPane.rowIndex="19" />
+            <Label fx:id="lblTentosEnvido" text="Tentos Envido:" GridPane.rowIndex="20" />
+            <Label fx:id="lblTentosTruco" text="Tentos Truco:" GridPane.rowIndex="21" />
+            <Label fx:id="infoSimilaridade" text="0.9743563321" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+            <Label fx:id="infoCaseId" text="2158" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+            <Label fx:id="infoJogadorMao" text="Agente" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+            <Label fx:id="infoPontosEnvido" text="29" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+            <Label fx:id="infoCartaAlta" text="40" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+            <Label fx:id="infoCartaMedia" text="16" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+            <Label fx:id="infoCartaBaixa" text="1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+            <Label fx:id="infoPontuacaoAgente" prefHeight="17.0" prefWidth="131.0" text="Antes: 4 ---&gt; Depois: 6" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" />
+            <Label fx:id="infoPontuacaoOponente" prefHeight="17.0" prefWidth="131.0" text="Antes: 7 ---&gt; Depois: 7" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="infoCartasJogadasAgente" prefHeight="17.0" prefWidth="244.0" text="1ª Carta: 1 | 2ª Carta: null | 3ª Carta: null" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" />
+            <Label fx:id="infoCartasJogadasOponente" prefHeight="17.0" prefWidth="244.0" text="1ª Carta: 1 | 2ª Carta: null | 3ª Carta: null" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="infoGanhadoresRodadas" prefHeight="17.0" prefWidth="350.0" text="1ª Rodada: Empate | 2ª Rodada: null | 3ª Rodada: null" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="infoEnvido" text="null" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label fx:id="infoRealEnvido" text="Agente" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label fx:id="infoFaltaEnvido" text="null" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label fx:id="infoNegouEnvido" text="Opponente" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Label fx:id="infoNegouTruco" text="Opponente" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+            <Label fx:id="infoVale4" text="null" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <Label fx:id="infoRetruco" text="null" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Label fx:id="infoTruco" text="Agente" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <Label fx:id="infoTentosEnvido" text="1" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <Label fx:id="infoTentosTruco" text="1" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

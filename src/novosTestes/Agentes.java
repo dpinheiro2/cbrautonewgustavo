@@ -27,8 +27,7 @@ public class Agentes {
 		
 		AgenteModelo agente6 = new AgenteModelo("maioria", "maioria", "Nenhum", "no", "nada", "baseline", 0.75, false);
 		hashAgentes.put(6, agente6);
-		
-		
+
 		AgenteModelo agente7 = new AgenteModelo("probabilidadesorteio", "probabilidadesorteio", "Nenhum", "yes", "nada", "baseline", 0.75, false);
 		hashAgentes.put(7, agente7);
 		

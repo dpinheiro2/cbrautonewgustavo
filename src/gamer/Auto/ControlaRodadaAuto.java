@@ -6,6 +6,7 @@ package gamer.Auto;
 
 import java.util.*;
 
+
 import cbr.Adaptacoes.CbrModular;
 import cbr.AtualizaConsultas.AtualizarConsultas;
 import cbr.AtualizaConsultas.AuxiliaConsultas.*;
@@ -13,6 +14,7 @@ import cbr.cbrDescriptions.TrucoDescription;
 import gamer.Truco.EstadoJogoModelo;
 import gamer.Truco.Cartas.DarCartasModelo;
 import gamer.ui.loader.LoaderActiveLearning;
+import jcolibri.method.retrieve.RetrievalResult;
 import model.Decision;
 import utils.Action;
 import utils.Deck;
@@ -62,6 +64,7 @@ public class ControlaRodadaAuto {
     private String envidoJustifications;
     private String trucoJustifications;
     private boolean compulsoryRetention = false;
+    private boolean isDisputaEnvidoFinalizada = false;
 
 
     public ControlaRodadaAuto() {
@@ -83,9 +86,10 @@ public class ControlaRodadaAuto {
         contadorJogadas = 0;
         tentosRodada = new TentosGanhos();
         compulsoryRetention = false;
+        isDisputaEnvidoFinalizada = false;
         printPlacar();
-        //darCartasFile();
-        darCartas();
+        darCartasFile();
+        //darCartas();
         printCartas(1, listaCartasRecebidasAgente1, "DEALT_CARDS");
         printCartas(2, listaCartasRecebidasAgente2, "DEALT_CARDS");
         System.out.println("ENVIDO_POINTS Player1 --> " + calcularPontosEnvidoAgente(1));
@@ -728,6 +732,59 @@ public class ControlaRodadaAuto {
         return description;
     }
 
+    //======================Métodos Vargas ========================================
+
+    private TrucoDescription atualizarConsultaEnvidoAL(int AgenteId, int Como) {
+
+        if (AgenteId == 1)
+            return new AtualizarConsultas().atualizaConsultaEnvidoPadrao(controlaPartidaAuto.getQuemEhMao(),
+                    calcularPontosEnvidoAgente(1), listaCartasJogadasAgente2, retornaQuemChamouEnvido(),
+                    retornaQuemChamouRealEnvido(), retornaQuemChamouFaltaEnvido(), controlaPartidaAuto.getPontosAgente1(),
+                    controlaPartidaAuto.getPontosAgente2());
+        else
+            return new AtualizarConsultas().atualizaConsultaEnvidoPadrao(
+                    inverterJogadores(controlaPartidaAuto.getQuemEhMao()), calcularPontosEnvidoAgente(2),
+                    listaCartasJogadasAgente1, inverterJogadores(retornaQuemChamouEnvido()),
+                    inverterJogadores(retornaQuemChamouRealEnvido()), inverterJogadores(retornaQuemChamouFaltaEnvido()),
+                    controlaPartidaAuto.getPontosAgente2(),
+                    controlaPartidaAuto.getPontosAgente1());
+
+    }
+
+    private TrucoDescription atualizarConsultaTrucoCartaAL(int AgenteId, int Como) {
+
+        int quandoTruco = (!listaJogadasChamadas.isEmpty() && verificaInformacoesJogada("Truco") != null
+                ? verificaInformacoesJogada("Truco").getEmQualRodada()
+                : 0);
+        int quandoRetruco = (!listaJogadasChamadas.isEmpty() && verificaInformacoesJogada("ReTruco") != null
+                ? verificaInformacoesJogada("ReTruco").getEmQualRodada()
+                : 0);
+        int quandoValeQuatro = (!listaJogadasChamadas.isEmpty() && verificaInformacoesJogada("ValeQuatro") != null
+                ? verificaInformacoesJogada("ValeQuatro").getEmQualRodada()
+                : 0);
+
+
+        if (AgenteId == 1) {
+
+            return new AtualizarConsultas().atualizaConsultaTrucoCartaPadrao(controlaPartidaAuto.getQuemEhMao(),
+                    listaCartasRecebidasAgente1, quemGanhouAPrimeiraMao(), quemGanhouASegundaMao(), quemChamouJogo("Truco"),
+                    quemChamouJogo("ReTruco"), quemChamouJogo("ValeQuatro"),
+                    listaCartasJogadasAgente1, listaCartasJogadasAgente2, listaJogadasChamadas, quandoTruco,
+                    quandoRetruco, quandoValeQuatro, controlaPartidaAuto.getPontosAnterioresAgente1(),
+                    controlaPartidaAuto.getPontosAnterioresAgente2());
+        } else {
+
+            return new AtualizarConsultas().atualizaConsultaTrucoCartaPadrao(
+                    inverterJogadores(controlaPartidaAuto.getQuemEhMao()), listaCartasRecebidasAgente2,
+                    inverterJogadores(quemGanhouAPrimeiraMao()), inverterJogadores(quemGanhouASegundaMao()), inverterJogadores(quemChamouJogo("Truco")),
+                    inverterJogadores(quemChamouJogo("ReTruco")), inverterJogadores(quemChamouJogo("ValeQuatro")),
+                    listaCartasJogadasAgente2, listaCartasJogadasAgente1, listaJogadasChamadas, quandoTruco, quandoRetruco, quandoValeQuatro,
+                    controlaPartidaAuto.getPontosAnterioresAgente2(), controlaPartidaAuto.getPontosAnterioresAgente1());
+        }
+    }
+
+    //=======================Fim Métodos Vargas ============================
+
     private TrucoDescription atualizarConsultaEnvido(int AgenteId, int Como) {
 
         if (AgenteId == 1)
@@ -1065,14 +1122,18 @@ public class ControlaRodadaAuto {
 
                     if (isOportunidadeBlefe) {
 
-                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("envido", contadorMao,
-                                atualizarConsultaEnvido(1,1), getDescriptionAtibutosBlefe())){
+                        Collection<RetrievalResult> casosRecuperadosPadrao =
+                                trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
+                                atualizarConsultaEnvidoAL(1,1));
 
+                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                                getDescriptionAtibutosBlefe())){
 
                             System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + pontoQueSeraChamado);
 
                             //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(pontoQueSeraChamado, 1, probGanhar));
+                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(pontoQueSeraChamado,
+                                    1, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                             System.out.println("[ENVIDO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                             if (responseActiveLearning != null) {
                                 pontoQueSeraChamado = responseActiveLearning;
@@ -1088,12 +1149,18 @@ public class ControlaRodadaAuto {
 
                     if (isOportunidadeBlefe) {
 
-                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("envido", contadorMao,
-                                atualizarConsultaEnvido(1, 1), getDescriptionAtibutosBlefe())){
+                        Collection<RetrievalResult> casosRecuperadosPadrao =
+                                trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
+                                        atualizarConsultaEnvidoAL(1,1));
+
+
+                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                                getDescriptionAtibutosBlefe())){
 
                             System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + "No Call Envido");
                             //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen("No Call Envido", 1, probGanhar));
+                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen("No Call Envido",
+                                    1, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                             System.out.println("[ENVIDO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                             if (responseActiveLearning != null) {
                                 pontoQueSeraChamado = responseActiveLearning;
@@ -1124,6 +1191,9 @@ public class ControlaRodadaAuto {
 
         } else {
             estadoJogo.getEnvidoHistory().add(new Action("No Call", AgenteId + ""));
+            if (!listaPontosChamados.isEmpty() && !listaPontosAceitos.isEmpty()) {
+                isDisputaEnvidoFinalizada = true;
+            }
         }
         System.out.println("[ENVIDO] Player" + AgenteId + " - " + (pontoQueSeraChamado.equals("") ? "No Call" : pontoQueSeraChamado));
 
@@ -1196,13 +1266,18 @@ public class ControlaRodadaAuto {
 
                     if (isOportunidadeBlefe) {
 
-                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("truco", contadorMao,
-                                atualizarConsultaTruco(1,1), getDescriptionTrucoActiveLearning())){
+                        Collection<RetrievalResult> casosRecuperadosPadrao =
+                                trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
+                                        atualizarConsultaTrucoCartaAL(1,1));
+
+                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                                getDescriptionAtibutosBlefe())){
 
                             System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + jogoQueSeraChamado);
 
                             //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(jogoQueSeraChamado, 2, probGanhar));
+                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(jogoQueSeraChamado,
+                                    2, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                             System.out.println("[TRUCO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                             if (responseActiveLearning != null) {
                                 jogoQueSeraChamado = responseActiveLearning;
@@ -1219,15 +1294,20 @@ public class ControlaRodadaAuto {
 
                     if (isOportunidadeBlefe) {
 
-                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("truco", contadorMao,
-                                atualizarConsultaTruco(1, 1), getDescriptionAtibutosBlefe())){
+                        Collection<RetrievalResult> casosRecuperadosPadrao =
+                                trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
+                                        atualizarConsultaTrucoCartaAL(1,1));
+
+                        if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                                getDescriptionAtibutosBlefe())){
 
                             System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + "No Call Truco");
 
                             //System.out.println(jogada + "-" + probGanhar);
                             //mostra_cartas(listaCartasRecebidasAgente1);
                             //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen("No Call Truco", 2, probGanhar));
+                            LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen("No Call Truco",
+                                    2, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                             System.out.println("[TRUCO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                             if (responseActiveLearning != null) {
                                 jogoQueSeraChamado = responseActiveLearning;
@@ -1321,13 +1401,19 @@ public class ControlaRodadaAuto {
 
                 if (isOportunidadeBlefe) {
 
-                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("envido", contadorMao,
-                            atualizarConsultaEnvido(1, 1) , getDescriptionAtibutosBlefe())){
+                    Collection<RetrievalResult> casosRecuperadosPadrao =
+                            trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
+                                    atualizarConsultaEnvidoAL(1,1));
+
+                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                            getDescriptionAtibutosBlefe())){
+
 
                         System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + (aceitouChamadaDePontos ? "Accept" : "Decline"));
 
                         //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(aceitouChamadaDePontos ? "Accept" : "Decline", 11, probGanhar));
+                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(aceitouChamadaDePontos ? "Accept" : "Decline",
+                                11, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                         System.out.println("[ENVIDO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                         if (responseActiveLearning != null) {
                             aceitouChamadaDePontos = responseActiveLearning.startsWith("Accept");
@@ -1414,13 +1500,19 @@ public class ControlaRodadaAuto {
 
                 if (isOportunidadeBlefe) {
 
-                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("truco", contadorMao,
-                            atualizarConsultaTruco(1, 1), getDescriptionAtibutosBlefe())){
+                    Collection<RetrievalResult> casosRecuperadosPadrao =
+                            trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
+                                    atualizarConsultaTrucoCartaAL(1,1));
+
+                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                            getDescriptionAtibutosBlefe())){
+
 
                         System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + (seraAceita ? "Accept" : "Decline"));
 
                         //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(seraAceita ? "Accept" : "Decline", 22, probGanhar));
+                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(seraAceita ? "Accept" : "Decline",
+                                22, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                         System.out.println("[TRUCO] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                         if (responseActiveLearning != null) {
                             seraAceita = responseActiveLearning.startsWith("Accept");
@@ -1657,12 +1749,20 @@ public class ControlaRodadaAuto {
                 System.out.println(probGanhar);
 
                 if (isOportunidadeBlefe) {
-                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual("carta", contadorMao, atualizarConsultaCarta(1, 1), getDescriptionAtibutosBlefe())){
+
+                    Collection<RetrievalResult> casosRecuperadosPadrao =
+                            trucoCbr_Agente1.getCasosRecuperadosFiltrados("carta", contadorMao,
+                                    atualizarConsultaTrucoCartaAL(1,1));
+
+                    if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
+                            getDescriptionAtibutosBlefe())){
+
 
                         System.out.println("[CARD] REUSE_POLICY_MOVE: " +  CartaJogada.getCarta());
 
                         //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(CartaJogada.getCarta(), 3, probGanhar));
+                        LoaderActiveLearning.openActiveLearningScreen(setInfoActiveScreen(CartaJogada.getCarta(),
+                                3, probGanhar, getCasoMaisSimilar(casosRecuperadosPadrao)));
                         System.out.println("[CARD] EXPERT_MOVE: " + (responseActiveLearning != null ? responseActiveLearning : "Keep Reuse Policy"));
                         if (responseActiveLearning != null) {
                             idDaCartaQueAgenteDeveJogar = consultaIdPelaCartaEx(responseActiveLearning, 1);
@@ -2092,6 +2192,141 @@ public class ControlaRodadaAuto {
         return oponenteSabe;
     }
 
+    public void atualizaScoutBlefesRealizadosAgenteNovo() {
+
+        int bluff1Success = 0;
+        int bluff2Success = 0;
+        int bluff3Success = 0;
+        int bluff4Success = 0;
+        int bluff5Success = 0;
+        int bluff6Success = 0;
+
+        int bluff1Failure = 0;
+        int bluff2Failure = 0;
+        int bluff3Failure = 0;
+        int bluff4Failure = 0;
+        int bluff5Failure = 0;
+        int bluff6Failure = 0;
+
+        int bluff1ShowDown = 0;
+        int bluff2ShowDown = 0;
+        int bluff3ShowDown = 0;
+        int bluff4ShowDown = 0;
+        int bluff5ShowDown = 0;
+        int bluff6ShowDown = 0;
+
+        for (Decision decision : controlaPartidaAuto.getMatch().getDecisions()) {
+
+            if (decision.getIsBluff() == 1) {
+                switch (decision.getTypeBluff()) {
+                    case 1:
+                        if (decision.getIndSuccess() == 1)
+                            bluff1Success += 1;
+                        else
+                            bluff1Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff1ShowDown += 1;
+                        break;
+                    case 2:
+                        if (decision.getIndSuccess() == 1)
+                            bluff2Success += 1;
+                        else
+                            bluff2Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff2ShowDown += 1;
+                        break;
+                    case 3:
+                        if (decision.getIndSuccess() == 1)
+                            bluff3Success += 1;
+                        else
+                            bluff3Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff3ShowDown += 1;
+                        break;
+                    case 4:
+                        if (decision.getIndSuccess() == 1)
+                            bluff4Success += 1;
+                        else
+                            bluff4Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff4ShowDown += 1;
+                        break;
+                    case 5:
+                        if (decision.getIndSuccess() == 1)
+                            bluff5Success += 1;
+                        else
+                            bluff5Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff5ShowDown += 1;
+                        break;
+                    case 6:
+                        if (decision.getIndSuccess() == 1)
+                            bluff6Success += 1;
+                        else
+                            bluff6Failure += 1;
+
+                        if (decision.getBluffCanBeDetected() == 1)
+                            bluff6ShowDown += 1;
+                        break;
+                }
+            }
+
+        }
+
+        controlaPartidaAuto.setCountBluff1Success(bluff1Success);
+        controlaPartidaAuto.setCountBluff1Failure(bluff1Failure);
+        controlaPartidaAuto.setCountBluff1ShowDown(bluff1ShowDown);
+
+        controlaPartidaAuto.setCountBluff2Success(bluff2Success);
+        controlaPartidaAuto.setCountBluff2Failure(bluff2Failure);
+        controlaPartidaAuto.setCountBluff2ShowDown(bluff2ShowDown);
+
+        controlaPartidaAuto.setCountBluff3Success(bluff3Success);
+        controlaPartidaAuto.setCountBluff3Failure(bluff3Failure);
+        controlaPartidaAuto.setCountBluff3ShowDown(bluff3ShowDown);
+
+        controlaPartidaAuto.setCountBluff4Success(bluff4Success);
+        controlaPartidaAuto.setCountBluff4Failure(bluff4Failure);
+        controlaPartidaAuto.setCountBluff4ShowDown(bluff4ShowDown);
+
+        controlaPartidaAuto.setCountBluff5Success(bluff5Success);
+        controlaPartidaAuto.setCountBluff5Failure(bluff5Failure);
+        controlaPartidaAuto.setCountBluff5ShowDown(bluff5ShowDown);
+
+        controlaPartidaAuto.setCountBluff6Success(bluff6Success);
+        controlaPartidaAuto.setCountBluff6Failure(bluff6Failure);
+        controlaPartidaAuto.setCountBluff6ShowDown(bluff6ShowDown);
+
+        System.out.println("[Scout Bluff_Agent_1_Success]: " + controlaPartidaAuto.getCountBluff1Success());
+        System.out.println("[Scout Bluff_Agent_1_Failure]: " + controlaPartidaAuto.getCountBluff1Failure());
+        System.out.println("[Scout Bluff_Agent_1_ShowDown]: " + controlaPartidaAuto.getCountBluff1ShowDown());
+
+        System.out.println("[Scout Bluff_Agent_2_Success]: " + controlaPartidaAuto.getCountBluff2Success());
+        System.out.println("[Scout Bluff_Agent_2_Failure]: " + controlaPartidaAuto.getCountBluff2Failure());
+        System.out.println("[Scout Bluff_Agent_2_ShowDown]: " + controlaPartidaAuto.getCountBluff2ShowDown());
+
+        System.out.println("[Scout Bluff_Agent_3_Success]: " + controlaPartidaAuto.getCountBluff3Success());
+        System.out.println("[Scout Bluff_Agent_3_Failure]: " + controlaPartidaAuto.getCountBluff3Failure());
+        System.out.println("[Scout Bluff_Agent_3_ShowDown]: " + controlaPartidaAuto.getCountBluff3ShowDown());
+
+        System.out.println("[Scout Bluff_Agent_4_Success]: " + controlaPartidaAuto.getCountBluff4Success());
+        System.out.println("[Scout Bluff_Agent_4_Failure]: " + controlaPartidaAuto.getCountBluff4Failure());
+        System.out.println("[Scout Bluff_Agent_4_ShowDown]: " + controlaPartidaAuto.getCountBluff4ShowDown());
+
+        System.out.println("[Scout Bluff_Agent_5_Success]: " + controlaPartidaAuto.getCountBluff5Success());
+        System.out.println("[Scout Bluff_Agent_5_Failure]: " + controlaPartidaAuto.getCountBluff5Failure());
+        System.out.println("[Scout Bluff_Agent_5_ShowDown]: " + controlaPartidaAuto.getCountBluff5ShowDown());
+
+        System.out.println("[Scout Bluff_Agent_6_Success]: " + controlaPartidaAuto.getCountBluff6Success());
+        System.out.println("[Scout Bluff_Agent_6_Failure]: " + controlaPartidaAuto.getCountBluff6Failure());
+        System.out.println("[Scout Bluff_Agent_6_ShowDown]: " + controlaPartidaAuto.getCountBluff6ShowDown());
+    }
+
     public void atualizaScoutBlefesRealizadosAgente() {
 
         Integer QuemFlor = 0;
@@ -2343,11 +2578,13 @@ public class ControlaRodadaAuto {
         //}
 
         boolean terceiraCartaOpponent = false;
+
         if (cartasJogadasMesa.size() > 2) {
             for (CartasModelo carta : listaCartasRecebidasAgente2) {
                 if (carta.getCarta().equals(cartasJogadasMesa.get(2).getCarta())) {
                     terceiraCartaOpponent = true;
                 }
+
             }
         }
 
@@ -3507,7 +3744,12 @@ public class ControlaRodadaAuto {
                             decision.setIndSuccess(QuemGanhouEnvido.equals(1) ? 1 : 0);
 
                         } else if (decision.getDecision().equals("Disclaim")) {
-                            decision.setIndSuccess(isOponenteBlefouEnvido() ? 0 : 1);
+                            if (decision.getProbWin() > 0.85) {
+                                decision.setIndSuccess(0);
+                            } else {
+                                decision.setIndSuccess(isOponenteBlefouEnvido() ? 0 : 1);
+                            }
+
                         }
 
                         if (ganhadorEnvido.equals(1)) {
@@ -3532,7 +3774,7 @@ public class ControlaRodadaAuto {
                                 }
                             }
 
-                        } else if (decision.getDecision().equals("Truco") || decision.getDecision().equals("Retruco") || decision.getDecision().equals("ValeQuatro")) {
+                        } else if (decision.getDecision().equals("Truco") || decision.getDecision().equals("ReTruco") || decision.getDecision().equals("ValeQuatro")) {
                             if (decision.getProbWin() < 0.5) {
                                 decision.setIsBluff(1);
                                 decision.setTypeBluff(decision.getStateDecision().equals(6) ? 6 : 4);
@@ -3850,50 +4092,108 @@ public class ControlaRodadaAuto {
         int score = controlaPartidaAuto.getPontosAgente1();
 
         QuemGanhouPontosModelo quemGanhou = new QuemGanhouPontosModelo();
-        if (!listaPontosAceitos.isEmpty() && listPontosNaoAceitos.isEmpty()) {
-            if (listaPontosAceitos.size() >= 2
-                    && listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("RealEnvido")
-                    && listaPontosAceitos.get(listaPontosAceitos.size() - 2).getJogadaAceita()
-                    .equalsIgnoreCase("Envido")) {
-                switch (QuemGanhouOsPontos()) {
-                    case 1:
-                        score += 5;
-                        break;
-                }
+        isDisputaEnvidoFinalizada();
+        if (isDisputaEnvidoFinalizada) {
+            // caso nÃƒÂ£o seja aceito pontos
+            if (!listPontosNaoAceitos.isEmpty()) {
 
-            }
-            // verifica se for envido e pontua em 2 pontos
-            else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("Envido")) {
+                String lastDeclinedPoint = listPontosNaoAceitos.get(listPontosNaoAceitos.size() - 1).getJogadaNaoAceita();
+                String lastCalledPoint = listaPontosChamados.get(listaPontosChamados.size() - 1).getJogadaChamada();
+                int lastPlayerCallPoints = listaPontosChamados.get(listaPontosChamados.size() - 1).getQuemChamou();
+
+                if (listaPontosAceitos.isEmpty()) {
+
+                    if ((lastCalledPoint.equalsIgnoreCase("Envido") && lastDeclinedPoint.equals("Envido")) ||
+                            (lastCalledPoint.equalsIgnoreCase("RealEnvido") && lastDeclinedPoint.equals("RealEnvido")) ||
+                            (lastCalledPoint.equalsIgnoreCase("FaltaEnvido") && lastDeclinedPoint.equals("FaltaEnvido"))) {
+
+                        if (lastPlayerCallPoints == 1) {
+                            score += 1;
+                        }
+                    }
+
+                } else {
+
+                    String lastAcceptPoint = listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita();
+
+                    if (lastAcceptPoint.equals("Envido")) {
+
+                        if (lastDeclinedPoint.equals("RealEnvido")) {
+
+                            if (lastPlayerCallPoints == 1) {
+                                score += 2;
+                            }
+
+                        } else if (lastDeclinedPoint.equals("FaltaEnvido")) {
+
+                            if (lastPlayerCallPoints == 1) {
+                                score += 2;
+                            }
+
+                        }
+
+                    } else if (lastAcceptPoint.equals("RealEnvido")) {
+
+                        if (lastDeclinedPoint.equals("FaltaEnvido")) {
+
+                            if (lastPlayerCallPoints == 1) {
+                                score += 5;
+                            }
+
+                        }
+
+                    }
+
+                }
+            } else {
+
+                if (!listaPontosAceitos.isEmpty() && listPontosNaoAceitos.isEmpty()) {
+                    if (listaPontosAceitos.size() >= 2
+                            && listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("RealEnvido")
+                            && listaPontosAceitos.get(listaPontosAceitos.size() - 2).getJogadaAceita()
+                            .equalsIgnoreCase("Envido")) {
+                        switch (QuemGanhouOsPontos()) {
+                            case 1:
+                                score += 5;
+                                break;
+                        }
+
+                    }
+                    // verifica se for envido e pontua em 2 pontos
+                    else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("Envido")) {
 //						System.out.println("\t\tPontuando envido  +2");
 
-                switch (QuemGanhouOsPontos()) {
-                    case 1:
-                        score += 2;
-                        break;
-                }
+                        switch (QuemGanhouOsPontos()) {
+                            case 1:
+                                score += 2;
+                                break;
+                        }
 
-            }
-            // verifica se foi chamado realEnvido Sem Envido antes e pontua em 3 pontos
-            else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("RealEnvido")) {
+                    }
+                    // verifica se foi chamado realEnvido Sem Envido antes e pontua em 3 pontos
+                    else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("RealEnvido")) {
 
-                switch (QuemGanhouOsPontos()) {
-                    case 1:
-                        score += 3;
-                        break;
-                }
+                        switch (QuemGanhouOsPontos()) {
+                            case 1:
+                                score += 3;
+                                break;
+                        }
 
-            } else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("FaltaEnvido")) {
-                switch (QuemGanhouOsPontos()) {
-                    case 1:
-                        score += (24 - controlaPartidaAuto.getPontosAgente2());
-                        break;
+                    } else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("FaltaEnvido")) {
+                        switch (QuemGanhouOsPontos()) {
+                            case 1:
+                                score += (24 - controlaPartidaAuto.getPontosAgente2());
+                                break;
+                        }
+                    }
                 }
             }
         }
+
         // caso o ponto chamado seja flor
         if (!listaPontosChamados.isEmpty() && listaPontosChamados.get(listaPontosChamados.size() - 1)
                 .getJogadaChamada().equalsIgnoreCase("Flor")) {
@@ -3909,58 +4209,7 @@ public class ControlaRodadaAuto {
                 }
             }
         }
-        // caso nÃƒÂ£o seja aceito pontos
-        if (!listPontosNaoAceitos.isEmpty()) {
 
-            String lastDeclinedPoint = listPontosNaoAceitos.get(listPontosNaoAceitos.size() - 1).getJogadaNaoAceita();
-            String lastCalledPoint = listaPontosChamados.get(listaPontosChamados.size() - 1).getJogadaChamada();
-            int lastPlayerCallPoints = listaPontosChamados.get(listaPontosChamados.size() - 1).getQuemChamou();
-
-            if (listaPontosAceitos.isEmpty()) {
-
-                if ((lastCalledPoint.equalsIgnoreCase("Envido") && lastDeclinedPoint.equals("Envido")) ||
-                        (lastCalledPoint.equalsIgnoreCase("RealEnvido") && lastDeclinedPoint.equals("RealEnvido")) ||
-                        (lastCalledPoint.equalsIgnoreCase("FaltaEnvido") && lastDeclinedPoint.equals("FaltaEnvido"))) {
-
-                    if (lastPlayerCallPoints == 1) {
-                        score += 1;
-                    }
-                }
-
-            } else {
-
-                String lastAcceptPoint = listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita();
-
-                if (lastAcceptPoint.equals("Envido")) {
-
-                    if (lastDeclinedPoint.equals("RealEnvido")) {
-
-                        if (lastPlayerCallPoints == 1) {
-                            score += 2;
-                        }
-
-                    } else if (lastDeclinedPoint.equals("FaltaEnvido")) {
-
-                        if (lastPlayerCallPoints == 1) {
-                            score += 2;
-                        }
-
-                    }
-
-                } else if (lastAcceptPoint.equals("RealEnvido")) {
-
-                    if (lastDeclinedPoint.equals("FaltaEnvido")) {
-
-                        if (lastPlayerCallPoints == 1) {
-                            score += 5;
-                        }
-
-                    }
-
-                }
-
-            }
-        }
         return score;
     }
 
@@ -3969,50 +4218,109 @@ public class ControlaRodadaAuto {
         int score = controlaPartidaAuto.getPontosAgente2();
 
         QuemGanhouPontosModelo quemGanhou = new QuemGanhouPontosModelo();
-        if (!listaPontosAceitos.isEmpty() && listPontosNaoAceitos.isEmpty()) {
-            if (listaPontosAceitos.size() >= 2
-                    && listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("RealEnvido")
-                    && listaPontosAceitos.get(listaPontosAceitos.size() - 2).getJogadaAceita()
-                    .equalsIgnoreCase("Envido")) {
-                switch (QuemGanhouOsPontos()) {
-                    case 2:
-                        score += 5;
-                        break;
-                }
 
-            }
-            // verifica se for envido e pontua em 2 pontos
-            else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("Envido")) {
+        isDisputaEnvidoFinalizada();
+        if (isDisputaEnvidoFinalizada) {
+
+            // caso nÃƒÂ£o seja aceito pontos
+            if (!listPontosNaoAceitos.isEmpty()) {
+
+                String lastDeclinedPoint = listPontosNaoAceitos.get(listPontosNaoAceitos.size() - 1).getJogadaNaoAceita();
+                String lastCalledPoint = listaPontosChamados.get(listaPontosChamados.size() - 1).getJogadaChamada();
+                int lastPlayerCallPoints = listaPontosChamados.get(listaPontosChamados.size() - 1).getQuemChamou();
+
+                if (listaPontosAceitos.isEmpty()) {
+
+                    if ((lastCalledPoint.equalsIgnoreCase("Envido") && lastDeclinedPoint.equals("Envido")) ||
+                            (lastCalledPoint.equalsIgnoreCase("RealEnvido") && lastDeclinedPoint.equals("RealEnvido")) ||
+                            (lastCalledPoint.equalsIgnoreCase("FaltaEnvido") && lastDeclinedPoint.equals("FaltaEnvido"))) {
+
+                        if (lastPlayerCallPoints == 2) {
+                            score += 1;
+                        }
+                    }
+
+                } else {
+
+                    String lastAcceptPoint = listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita();
+
+                    if (lastAcceptPoint.equals("Envido")) {
+
+                        if (lastDeclinedPoint.equals("RealEnvido")) {
+
+                            if (lastPlayerCallPoints == 2) {
+                                score += 2;
+                            }
+
+                        } else if (lastDeclinedPoint.equals("FaltaEnvido")) {
+
+                            if (lastPlayerCallPoints == 2) {
+                                score += 2;
+                            }
+
+                        }
+
+                    } else if (lastAcceptPoint.equals("RealEnvido")) {
+
+                        if (lastDeclinedPoint.equals("FaltaEnvido")) {
+
+                            if (lastPlayerCallPoints == 2) {
+                                score += 5;
+                            }
+                        }
+
+                    }
+
+                }
+            } else {
+                if (!listaPontosAceitos.isEmpty() && listPontosNaoAceitos.isEmpty()) {
+                    if (listaPontosAceitos.size() >= 2
+                            && listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("RealEnvido")
+                            && listaPontosAceitos.get(listaPontosAceitos.size() - 2).getJogadaAceita()
+                            .equalsIgnoreCase("Envido")) {
+                        switch (QuemGanhouOsPontos()) {
+                            case 2:
+                                score += 5;
+                                break;
+                        }
+
+                    }
+                    // verifica se for envido e pontua em 2 pontos
+                    else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("Envido")) {
 //						System.out.println("\t\tPontuando envido  +2");
 
-                switch (QuemGanhouOsPontos()) {
-                    case 2:
-                        score += 2;
-                        break;
+                        switch (QuemGanhouOsPontos()) {
+                            case 2:
+                                score += 2;
+                                break;
+                        }
+
+                    }
+                    // verifica se foi chamado realEnvido Sem Envido antes e pontua em 3 pontos
+                    else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("RealEnvido")) {
+
+                        switch (QuemGanhouOsPontos()) {
+                            case 2:
+                                score += 3;
+                                break;
+                        }
+
+                    } else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
+                            .equalsIgnoreCase("FaltaEnvido")) {
+                        switch (QuemGanhouOsPontos()) {
+                            case 2:
+                                score += (24 - controlaPartidaAuto.getPontosAgente1());
+                                break;
+                        }
+                    }
                 }
 
-            }
-            // verifica se foi chamado realEnvido Sem Envido antes e pontua em 3 pontos
-            else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("RealEnvido")) {
-
-                switch (QuemGanhouOsPontos()) {
-                    case 2:
-                        score += 3;
-                        break;
-                }
-
-            } else if (listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita()
-                    .equalsIgnoreCase("FaltaEnvido")) {
-                switch (QuemGanhouOsPontos()) {
-                    case 2:
-                        score += (24 - controlaPartidaAuto.getPontosAgente1());
-                        break;
-                }
             }
         }
+
         // caso o ponto chamado seja flor
         if (!listaPontosChamados.isEmpty() && listaPontosChamados.get(listaPontosChamados.size() - 1)
                 .getJogadaChamada().equalsIgnoreCase("Flor")) {
@@ -4028,58 +4336,29 @@ public class ControlaRodadaAuto {
                 }
             }
         }
-        // caso nÃƒÂ£o seja aceito pontos
+
+        return score;
+    }
+
+    public void isDisputaEnvidoFinalizada() {
+
         if (!listPontosNaoAceitos.isEmpty()) {
 
-            String lastDeclinedPoint = listPontosNaoAceitos.get(listPontosNaoAceitos.size() - 1).getJogadaNaoAceita();
-            String lastCalledPoint = listaPontosChamados.get(listaPontosChamados.size() - 1).getJogadaChamada();
-            int lastPlayerCallPoints = listaPontosChamados.get(listaPontosChamados.size() - 1).getQuemChamou();
+            isDisputaEnvidoFinalizada = true;
 
-            if (listaPontosAceitos.isEmpty()) {
+        } else {
+            if (!listaPontosChamados.isEmpty() && !listaPontosAceitos.isEmpty() &&
+                    estadoJogo.getListaPontosQuePodemSerChamados().isEmpty()) {
 
-                if ((lastCalledPoint.equalsIgnoreCase("Envido") && lastDeclinedPoint.equals("Envido")) ||
-                        (lastCalledPoint.equalsIgnoreCase("RealEnvido") && lastDeclinedPoint.equals("RealEnvido")) ||
-                        (lastCalledPoint.equalsIgnoreCase("FaltaEnvido") && lastDeclinedPoint.equals("FaltaEnvido"))) {
+                isDisputaEnvidoFinalizada = true;
+            }
 
-                    if (lastPlayerCallPoints == 2) {
-                        score += 1;
-                    }
-                }
+            if (cartasJogadasMesa.size() > 1 ) {
 
-            } else {
-
-                String lastAcceptPoint = listaPontosAceitos.get(listaPontosAceitos.size() - 1).getJogadaAceita();
-
-                if (lastAcceptPoint.equals("Envido")) {
-
-                    if (lastDeclinedPoint.equals("RealEnvido")) {
-
-                        if (lastPlayerCallPoints == 2) {
-                            score += 2;
-                        }
-
-                    } else if (lastDeclinedPoint.equals("FaltaEnvido")) {
-
-                        if (lastPlayerCallPoints == 2) {
-                            score += 2;
-                        }
-
-                    }
-
-                } else if (lastAcceptPoint.equals("RealEnvido")) {
-
-                    if (lastDeclinedPoint.equals("FaltaEnvido")) {
-
-                        if (lastPlayerCallPoints == 2) {
-                            score += 5;
-                        }
-                    }
-
-                }
-
+                isDisputaEnvidoFinalizada = true;
             }
         }
-        return score;
+
     }
 
     public QuemGanhouPontosModelo pontuaQuemGanhouPontos() {
@@ -4339,13 +4618,15 @@ public class ControlaRodadaAuto {
     ////Active Learning
 
     //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
-    public GameState setInfoActiveScreen(String move, int moveType, double prob) {
+    public GameState setInfoActiveScreen(String move, int moveType, double prob, RetrievalResult casoMaisSimilar) {
 
         verificarEstadoJogo();
 
         gameState.setMoveType(moveType);
-        gameState.setAgentPoints(controlaPartidaAuto.getPontosAgente1());
-        gameState.setOpponentPoints(controlaPartidaAuto.getPontosAgente2());
+        //gameState.setAgentPoints(controlaPartidaAuto.getPontosAgente1());
+        gameState.setAgentPoints(getScoreAtualPlayer1());
+        gameState.setOpponentPoints(getScoreAtualPlayer2());
+        //gameState.setOpponentPoints(controlaPartidaAuto.getPontosAgente2());
         gameState.setEnvidoPoints(calcularPontosEnvidoAgente(1));
 
         if ( (listaCartasJogadasAgente2.size() > 1 &&
@@ -4441,6 +4722,11 @@ public class ControlaRodadaAuto {
         }
 
         gameState.setProb(prob);
+
+        gameState.setCasoMaisSimilar( (TrucoDescription) casoMaisSimilar.get_case().getDescription());
+
+        gameState.setSimilarity(casoMaisSimilar.getEval());
+        gameState.setCaseId(((TrucoDescription) casoMaisSimilar.get_case().getDescription()).getId());
 
         return gameState;
     }
@@ -4855,9 +5141,26 @@ public class ControlaRodadaAuto {
         decision.setBluffDetectedOpponent(0);
 
         decision.setIndSuccess(0);
+        decision.setBluffCanBeDetected(0);
 
 
         return decision;
+    }
+
+    public RetrievalResult getCasoMaisSimilar( Collection<RetrievalResult> casosRecuperadosPadrao) {
+
+        RetrievalResult casoMaisSimilar = null;
+
+        Iterator iterator = casosRecuperadosPadrao.iterator();
+        if (iterator.hasNext()) {
+            RetrievalResult r = (RetrievalResult) iterator.next();
+            System.out.println("[SIMILARIDADE]-> " + r.getEval() + "[CaseId]-> " + r.get_case().getDescription().getIdAttribute());
+            casoMaisSimilar = r;
+            //casoMaisSimilar = (cbr.cbrDescriptions.TrucoDescription) r.get_case().getDescription();
+            System.out.println(r.get_case().getDescription().toString());
+        }
+
+        return casoMaisSimilar;
     }
 
 }

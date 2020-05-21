@@ -1,31 +1,22 @@
 package gamer.Auto;
 
+import CbrQuerys.CBR;
+import cbr.Adaptacoes.CbrModular;
+import hibernate.utils.HibernateUtil;
+import jcolibri.exception.ExecutionException;
+import model.Match;
+import model.Player;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-
-import CbrQuerys.CBR;
-
-import cbr.Adaptacoes.CbrModular;
-import model.Decision;
-import model.Match;
-import model.Player;
-import hibernate.utils.HibernateUtil;
-import jcolibri.exception.ExecutionException;
-import markov.RespondeMarkovEngine;
-
-import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
-import treinamentoModelo.SetCbrModelo;
-
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControlaPartidaAuto {
 
@@ -649,7 +640,7 @@ public class ControlaPartidaAuto {
 	public void salvaHistorico() {
 		
 		adicionaPartida();
-		String Dados = "";
+		/*String Dados = "";
 		for (String Tento : listaRodadas) {
 			Dados = Dados + Tento;
 		}
@@ -663,7 +654,7 @@ public class ControlaPartidaAuto {
 			bw.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	public void setaUltimoId(String tipoReuso1, String tipoAprendizagem1,  String Base1,

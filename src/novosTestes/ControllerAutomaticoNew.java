@@ -51,7 +51,7 @@ public class ControllerAutomaticoNew {
 		salvarSaidaSystemOutPrintParaArquivo();
 
 		controlaPartida = ControlaPartidaAuto.mataInstacia();
-		contadorPartidas = 0;
+		contadorPartidas = 1;
 		TipoReuso1 = set.getTipoReusoExtraCluster1();
 		TipoReusoIntra1 = set.getTipoReusoIntraCluster1();
 		TipoAprendizagem1 = set.getTipoAprendizagem1();
@@ -81,8 +81,8 @@ public class ControllerAutomaticoNew {
 		while (contadorPartidas <= numeroDePartidasSolicitadas) {
 			controlaPartida.setCBR(TipoReuso1, TipoAprendizagem1, TipoReuso2, TipoAprendizagem2, TipoBase1, TipoBase2, UsarCluster1, UsarCluster2, threshold1, threshold2, TipoReusoIntra1, TipoReusoIntra2,
 					recalcularCentroidesUm, recalcularCentroidesDois, revisarAtivo1, revisarAtivo2);
-			controlaPartida.setaUltimoId(TipoReuso1, TipoAprendizagem1,  TipoBase1, TipoReuso2, TipoAprendizagem2,
-					TipoBase2,UsarCluster1, UsarCluster2, TipoReusoIntra1, TipoReusoIntra2);
+			/*controlaPartida.setaUltimoId(TipoReuso1, TipoAprendizagem1,  TipoBase1, TipoReuso2, TipoAprendizagem2,
+					TipoBase2,UsarCluster1, UsarCluster2, TipoReusoIntra1, TipoReusoIntra2);*/
 
 			contadorPartidas++;
 			novaPartida(contadorPartidas);
@@ -257,10 +257,12 @@ public class ControllerAutomaticoNew {
 		String pontos = controlaRodadaAuto.pontosRodada();
 		//System.out.println("=====END HAND=====");
 		controlaRodadaAuto.setResultToEachDecision();
+		//controlaRodadaAuto.atualizaScoutBlefesRealizadosAgente();
+		controlaRodadaAuto.atualizaScoutBlefesRealizadosAgenteNovo();
+		controlaRodadaAuto.atualizaScoutBlefesPlotadosOpponente();
 		controlaRodadaAuto.criaDescriptionParaPersistir();
 
-		controlaRodadaAuto.atualizaScoutBlefesRealizadosAgente();
-		controlaRodadaAuto.atualizaScoutBlefesPlotadosOpponente();
+
 
 		if (!controlaPartida.isTemMaisRodada()) {
 			Player player1 = ControlaPartidaAuto.getInstacia().getPlayer1();
