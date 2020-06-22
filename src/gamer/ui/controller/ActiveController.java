@@ -79,6 +79,8 @@ public class ActiveController {
     @FXML private Label lblSimilarity;
     @FXML private Label lblCaseId;
     @FXML private Button btnDetails;
+    @FXML private CheckBox cbIsOpportunity;
+    @FXML private CheckBox cbIsBluff;
 
     final String bluff1 = "Bet/Raise Envido";
     final String bluff2 = "Slow Play Envido";
@@ -93,6 +95,8 @@ public class ActiveController {
     private String responseActiveLearning;
     private ControlaRodadaAuto controlaRodadaAuto;
     private List<CartasModelo> cartas;
+    private boolean isDeceptionOpportunity;
+    private boolean reponseIsBluff;
 
     private ObservableList<String> observableListBlefes = FXCollections.observableArrayList();
 
@@ -104,10 +108,20 @@ public class ActiveController {
         this.gameState = gameState;
     }
 
+    public boolean isDeceptionOpportunity() {
+        return isDeceptionOpportunity;
+    }
+
+    public void setDeceptionOpportunity(boolean deceptionOpportunity) {
+        isDeceptionOpportunity = deceptionOpportunity;
+    }
+
     public void initData(GameState gameState, ControlaRodadaAuto controlaRodadaAuto) {
+
         this.gameState = gameState;
         this.controlaRodadaAuto = controlaRodadaAuto;
         this.cartas = getCartas();
+        this.isDeceptionOpportunity = (Double.valueOf(gameState.getProb()) < 0.5 || Double.valueOf(gameState.getProb()) > 0.85);
         //System.out.println(gameState.getMove());
         setMoves();
         setInfoGameState();
@@ -223,11 +237,22 @@ public class ActiveController {
     public void initialize() {
 
         responseActiveLearning = null;
+        reponseIsBluff = false;
         moves = new ArrayList<>();
 
         cbConfirmMove.setSelected(true);
         pnlNewMove.setVisible(!cbConfirmMove.isSelected());
         pnlRetievedMove.setVisible(cbConfirmMove.isSelected());
+
+        /*cbIsBluff.setSelected(false);
+        cbIsBluff.setDisable(true);*/
+        cbIsBluff.setVisible(false);
+        cbIsOpportunity.setVisible(false);
+
+        /*cbIsOpportunity.setOnAction((event) -> {
+            boolean selected = cbIsOpportunity.isSelected();
+            cbIsBluff.setDisable(!selected);
+        });*/
 
         cbConfirmMove.setOnAction((event) -> {
             boolean selected = cbConfirmMove.isSelected();
@@ -247,6 +272,7 @@ public class ActiveController {
             controlaRodadaAuto.setCompulsoryRetention(true);
             responseActiveLearning = getSelectedAction();
             controlaRodadaAuto.setResponseActiveLearning(responseActiveLearning);
+            controlaRodadaAuto.setResponseIsBluff(cbIsBluff.isSelected());
             switch (gameState.getMoveType()) {
                 case 1:
                     controlaRodadaAuto.setUtilEnvido(true);
@@ -589,8 +615,15 @@ public class ActiveController {
     }
 
     public void setInfoMostSimilarCase() {
-        lblSimilarity.setText("Similarity: " + String.valueOf(gameState.getSimilarity()));
-        lblCaseId.setText("CaseId: " + String.valueOf(gameState.getCaseId()));
+        if (gameState.getCasoMaisSimilar() != null) {
+            lblSimilarity.setText("Similarity: " + String.valueOf(gameState.getSimilarity()));
+            lblCaseId.setText("CaseId: " + String.valueOf(gameState.getCaseId()));
+        } else {
+            btnDetails.setDisable(true);
+        }
+
+       /* cbIsOpportunity.setSelected(isDeceptionOpportunity);
+        cbIsBluff.setDisable(!cbIsOpportunity.isSelected());*/
         //Colocar aqui as informações do grid
 
     }

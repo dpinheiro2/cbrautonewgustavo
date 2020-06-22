@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamer.ui.controller.ActiveController">
@@ -189,7 +188,16 @@
                     <HBox layoutX="374.0" layoutY="52.0" prefHeight="30.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                         <children>
                         <Button fx:id="btnDetails" mnemonicParsing="false" text="Details Case" />
-                            <Region prefHeight="26.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                        <CheckBox fx:id="cbIsOpportunity" mnemonicParsing="false" text="is Opportunity?">
+                           <HBox.margin>
+                              <Insets top="4.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="cbIsBluff" mnemonicParsing="false" text="is It Bluff?">
+                           <HBox.margin>
+                              <Insets top="4.0" />
+                           </HBox.margin>
+                        </CheckBox>
                             <Button fx:id="btnCancel" mnemonicParsing="false" text="Cancel" />
                             <Button fx:id="btnSave" mnemonicParsing="false" text="Save" />
                         </children>

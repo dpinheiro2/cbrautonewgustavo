@@ -4,6 +4,8 @@ package gamer.Auto;
 
 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 
@@ -56,6 +58,7 @@ public class ControlaRodadaAuto {
     private List<CartasModelo> cartasJogadasMesa;
     private Deck deck;
     private String responseActiveLearning;
+    private boolean responseIsBluff;
     private boolean utilEnvido = false;
     private boolean utilTruco = false;
     private boolean utilCarta = false;
@@ -72,6 +75,7 @@ public class ControlaRodadaAuto {
         gameState = new GameState();
         cartasJogadasMesa = new ArrayList<CartasModelo>();
         responseActiveLearning = null;
+        responseIsBluff = false;
         utilEnvido = false;
         utilTruco = false;
         utilCarta = false;
@@ -88,10 +92,10 @@ public class ControlaRodadaAuto {
         compulsoryRetention = false;
         isDisputaEnvidoFinalizada = false;
         printPlacar();
-        darCartasFile();
-        //darCartas();
+        //darCartasFile();
+        darCartas();
         printCartas(1, listaCartasRecebidasAgente1, "DEALT_CARDS");
-        printCartas(2, listaCartasRecebidasAgente2, "DEALT_CARDS");
+        //printCartas(2, listaCartasRecebidasAgente2, "DEALT_CARDS");
         System.out.println("ENVIDO_POINTS Player1 --> " + calcularPontosEnvidoAgente(1));
         //System.out.println("ENVIDO_POINTS Player2 --> " + calcularPontosEnvidoAgente(2));
         deck.gerarAllOpponentHandsPossible(listaCartasRecebidasAgente1.get(0).getCarta(),
@@ -1120,14 +1124,17 @@ public class ControlaRodadaAuto {
 
                 if (!pontoQueSeraChamado.equals("")) {
 
+                    //Comentado para somente utilizar no gatilho CBR
                     if (isOportunidadeBlefe) {
+
+                        TrucoDescription currentQuery = atualizarConsultaEnvidoAL(1,1);
 
                         Collection<RetrievalResult> casosRecuperadosPadrao =
                                 trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
-                                atualizarConsultaEnvidoAL(1,1));
+                                        currentQuery);
 
                         if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                                getDescriptionAtibutosBlefe())){
+                                getDescriptionAtibutosBlefe(currentQuery), 1)){
 
                             System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + pontoQueSeraChamado);
 
@@ -1147,15 +1154,18 @@ public class ControlaRodadaAuto {
 
                 } else {
 
+                    //Comentado para somente utilizar no gatilho CBR
                     if (isOportunidadeBlefe) {
+
+                        TrucoDescription currentQuery = atualizarConsultaEnvidoAL(1,1);
 
                         Collection<RetrievalResult> casosRecuperadosPadrao =
                                 trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
-                                        atualizarConsultaEnvidoAL(1,1));
+                                        currentQuery);
 
 
                         if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                                getDescriptionAtibutosBlefe())){
+                                getDescriptionAtibutosBlefe(currentQuery), 1)){
 
                             System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + "No Call Envido");
                             //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
@@ -1264,14 +1274,17 @@ public class ControlaRodadaAuto {
 
                     System.out.println(probGanhar);
 
+                    //Comentado para somente utilizar no gatilho CBR
                     if (isOportunidadeBlefe) {
+
+                        TrucoDescription currentQuery = atualizarConsultaTrucoCartaAL(1,1);
 
                         Collection<RetrievalResult> casosRecuperadosPadrao =
                                 trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
-                                        atualizarConsultaTrucoCartaAL(1,1));
+                                        currentQuery);
 
                         if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                                getDescriptionAtibutosBlefe())){
+                                getDescriptionAtibutosBlefe(currentQuery), 2)){
 
                             System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + jogoQueSeraChamado);
 
@@ -1292,14 +1305,17 @@ public class ControlaRodadaAuto {
 
                 } else {
 
+                    //Comentado para somente utilizar no gatilho CBR
                     if (isOportunidadeBlefe) {
+
+                        TrucoDescription currentQuery = atualizarConsultaTrucoCartaAL(1,1);
 
                         Collection<RetrievalResult> casosRecuperadosPadrao =
                                 trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
-                                        atualizarConsultaTrucoCartaAL(1,1));
+                                        currentQuery);
 
                         if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                                getDescriptionAtibutosBlefe())){
+                                getDescriptionAtibutosBlefe(currentQuery), 2)){
 
                             System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + "No Call Truco");
 
@@ -1399,14 +1415,17 @@ public class ControlaRodadaAuto {
             if (trucoCbr_Agente1.isActiveLearning() && !pontoSolicitadoParaSerAceito.equals("Flor") &&
                     !pontoSolicitadoParaSerAceito.equals("ContraFlor") && !pontoSolicitadoParaSerAceito.equals("ContraFlorResto")) {
 
+                //Comentado para somente utilizar no gatilho CBR
                 if (isOportunidadeBlefe) {
+
+                    TrucoDescription currentQuery = atualizarConsultaEnvidoAL(1,1);
 
                     Collection<RetrievalResult> casosRecuperadosPadrao =
                             trucoCbr_Agente1.getCasosRecuperadosFiltrados("envido", contadorMao,
-                                    atualizarConsultaEnvidoAL(1,1));
+                                    currentQuery);
 
                     if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                            getDescriptionAtibutosBlefe())){
+                            getDescriptionAtibutosBlefe(currentQuery), 1)){
 
 
                         System.out.println("[ENVIDO] REUSE_POLICY_MOVE: " + (aceitouChamadaDePontos ? "Accept" : "Decline"));
@@ -1498,14 +1517,17 @@ public class ControlaRodadaAuto {
 
             if (trucoCbr_Agente1.isActiveLearning()) {
 
+                //Comentado para somente utilizar no gatilho CBR
                 if (isOportunidadeBlefe) {
+
+                    TrucoDescription currentQuery = atualizarConsultaTrucoCartaAL(1,1);
 
                     Collection<RetrievalResult> casosRecuperadosPadrao =
                             trucoCbr_Agente1.getCasosRecuperadosFiltrados("truco", contadorMao,
-                                    atualizarConsultaTrucoCartaAL(1,1));
+                                    currentQuery);
 
                     if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                            getDescriptionAtibutosBlefe())){
+                            getDescriptionAtibutosBlefe(currentQuery), 2)){
 
 
                         System.out.println("[TRUCO] REUSE_POLICY_MOVE: " + (seraAceita ? "Accept" : "Decline"));
@@ -1748,14 +1770,17 @@ public class ControlaRodadaAuto {
 
                 System.out.println(probGanhar);
 
+                //Comentado para somente utilizar no gatilho CBR
                 if (isOportunidadeBlefe) {
+
+                    TrucoDescription currentQuery = atualizarConsultaTrucoCartaAL(1,1);
 
                     Collection<RetrievalResult> casosRecuperadosPadrao =
                             trucoCbr_Agente1.getCasosRecuperadosFiltrados("carta", contadorMao,
-                                    atualizarConsultaTrucoCartaAL(1,1));
+                                    currentQuery);
 
                     if (trucoCbr_Agente1.deveChamarTelaAtivoEmCadaAcaoIndividual(casosRecuperadosPadrao,
-                            getDescriptionAtibutosBlefe())){
+                            getDescriptionAtibutosBlefe(currentQuery), 2)){
 
 
                         System.out.println("[CARD] REUSE_POLICY_MOVE: " +  CartaJogada.getCarta());
@@ -1854,19 +1879,88 @@ public class ControlaRodadaAuto {
     }
 
     private CartasModelo consultaCartaPeloId(int idCartaSolicitada, int Quem) {
+
         CartasModelo carta = new CartasModelo();
+        List<CartasModelo> cartasNaoJogadas = new ArrayList<>();
+
         if (Quem == 1) {
-            for (CartasModelo cartas : listaCartasRecebidasAgente1) {
-                if (cartas.getId() == idCartaSolicitada)
-                    carta = cartas;
+
+            try {
+                for (CartasModelo cartas : listaCartasRecebidasAgente1) {
+                    cartasNaoJogadas.add(cartas);
+                }
+
+                CartasModelo carta1 = listaCartasRecebidasAgente1.get(0);
+                CartasModelo carta2 = listaCartasRecebidasAgente1.get(1);
+                CartasModelo carta3 = listaCartasRecebidasAgente1.get(2);
+
+                for (CartasModelo cartaJogada : cartasJogadasMesa) {
+                    if (cartaJogada.getCarta().equals(carta1.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta1.getCarta()));
+                    }
+                    if (cartaJogada.getCarta().equals(carta2.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta2.getCarta()));
+                    }
+                    if (cartaJogada.getCarta().equals(carta3.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta3.getCarta()));
+                    }
+                }
+
+                for (CartasModelo cartas : cartasNaoJogadas) {
+                    if (cartas.getId() == idCartaSolicitada)
+                        carta = cartas;
+                }
+                return carta;
+
+            } catch (Exception e) {
+                System.out.println("Carta Repetida");
+                for (CartasModelo cartas : listaCartasRecebidasAgente1) {
+                    if (cartas.getId() == idCartaSolicitada)
+                        carta = cartas;
+                }
+                return carta;
             }
-            return carta;
+
         } else {
-            for (CartasModelo cartas : listaCartasRecebidasAgente2) {
-                if (cartas.getId() == idCartaSolicitada)
-                    carta = cartas;
+
+            try {
+
+                for (CartasModelo cartas : listaCartasRecebidasAgente2) {
+                    cartasNaoJogadas.add(cartas);
+                }
+
+                CartasModelo carta1 = listaCartasRecebidasAgente2.get(0);
+                CartasModelo carta2 = listaCartasRecebidasAgente2.get(1);
+                CartasModelo carta3 = listaCartasRecebidasAgente2.get(2);
+
+                for (CartasModelo cartaJogada : cartasJogadasMesa) {
+                    if (cartaJogada.getCarta().equals(carta1.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta1.getCarta()));
+                    }
+                    if (cartaJogada.getCarta().equals(carta2.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta2.getCarta()));
+                    }
+                    if (cartaJogada.getCarta().equals(carta3.getCarta())) {
+                        cartasNaoJogadas.remove(new String(carta3.getCarta()));
+                    }
+                }
+
+                for (CartasModelo cartas : cartasNaoJogadas) {
+                    if (cartas.getId() == idCartaSolicitada)
+                        carta = cartas;
+                }
+
+                return carta;
+
+            } catch (Exception e) {
+
+                System.out.println("Carta Repetida Opp");
+                for (CartasModelo cartas : listaCartasRecebidasAgente2) {
+                    if (cartas.getId() == idCartaSolicitada)
+                        carta = cartas;
+                }
+                return carta;
             }
-            return carta;
         }
     }
 
@@ -2218,6 +2312,7 @@ public class ControlaRodadaAuto {
         for (Decision decision : controlaPartidaAuto.getMatch().getDecisions()) {
 
             if (decision.getIsBluff() == 1) {
+                hasDeception = true;
                 switch (decision.getTypeBluff()) {
                     case 1:
                         if (decision.getIndSuccess() == 1)
@@ -2302,7 +2397,7 @@ public class ControlaRodadaAuto {
         controlaPartidaAuto.setCountBluff6Failure(bluff6Failure);
         controlaPartidaAuto.setCountBluff6ShowDown(bluff6ShowDown);
 
-        System.out.println("[Scout Bluff_Agent_1_Success]: " + controlaPartidaAuto.getCountBluff1Success());
+        /*System.out.println("[Scout Bluff_Agent_1_Success]: " + controlaPartidaAuto.getCountBluff1Success());
         System.out.println("[Scout Bluff_Agent_1_Failure]: " + controlaPartidaAuto.getCountBluff1Failure());
         System.out.println("[Scout Bluff_Agent_1_ShowDown]: " + controlaPartidaAuto.getCountBluff1ShowDown());
 
@@ -2324,7 +2419,7 @@ public class ControlaRodadaAuto {
 
         System.out.println("[Scout Bluff_Agent_6_Success]: " + controlaPartidaAuto.getCountBluff6Success());
         System.out.println("[Scout Bluff_Agent_6_Failure]: " + controlaPartidaAuto.getCountBluff6Failure());
-        System.out.println("[Scout Bluff_Agent_6_ShowDown]: " + controlaPartidaAuto.getCountBluff6ShowDown());
+        System.out.println("[Scout Bluff_Agent_6_ShowDown]: " + controlaPartidaAuto.getCountBluff6ShowDown());*/
     }
 
     public void atualizaScoutBlefesRealizadosAgente() {
@@ -2960,11 +3055,11 @@ public class ControlaRodadaAuto {
 
                     if (isHand == 0) {
 
-                        oppHandStrength = deck.getStrenghtHand(listaCartasJogadasAgente2.get(0).getCarta(),
-                                listaCartasJogadasAgente2.get(1).getCarta(), listaCartasJogadasAgente2.get(2).getCarta());
+                        oppHandStrength = deck.getStrenghtHand(listaCartasRecebidasAgente2.get(0).getCarta(),
+                                listaCartasRecebidasAgente2.get(1).getCarta(), listaCartasRecebidasAgente2.get(2).getCarta());
 
-                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasJogadasAgente2.get(0).getCarta(),
-                                listaCartasJogadasAgente2.get(1).getCarta(), listaCartasJogadasAgente2.get(2).getCarta(),
+                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasRecebidasAgente2.get(0).getCarta(),
+                                listaCartasRecebidasAgente2.get(1).getCarta(), listaCartasRecebidasAgente2.get(2).getCarta(),
                                 listaCartasJogadasAgente1.get(0).getCarta()));
                     }
 
@@ -2977,13 +3072,13 @@ public class ControlaRodadaAuto {
 
                     if (validaCamposNulos(GanhadorPrimeira) == 1) {
 
-                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasJogadasAgente2.get(0).getCarta(),
-                                listaCartasJogadasAgente2.get(1).getCarta(), listaCartasJogadasAgente2.get(2).getCarta(),
+                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasRecebidasAgente2.get(0).getCarta(),
+                                listaCartasRecebidasAgente2.get(1).getCarta(), listaCartasRecebidasAgente2.get(2).getCarta(),
                                 listaCartasJogadasAgente1.get(0).getCarta(), listaCartasJogadasAgente1.get(1).getCarta()));
 
                     } else {
-                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasJogadasAgente2.get(0).getCarta(),
-                                listaCartasJogadasAgente2.get(1).getCarta(), listaCartasJogadasAgente2.get(2).getCarta(),
+                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasRecebidasAgente2.get(0).getCarta(),
+                                listaCartasRecebidasAgente2.get(1).getCarta(), listaCartasRecebidasAgente2.get(2).getCarta(),
                                 listaCartasJogadasAgente1.get(0).getCarta()));
                     }
 
@@ -2996,8 +3091,8 @@ public class ControlaRodadaAuto {
 
                     if (validaCamposNulos(GanhadorSegunda) == 2) {
 
-                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasJogadasAgente2.get(0).getCarta(),
-                                listaCartasJogadasAgente2.get(1).getCarta(), listaCartasJogadasAgente2.get(2).getCarta(),
+                        probMao = deck.getProbBestHand(isHand, oppHandStrength, deck.getFilteredAgentHands(listaCartasRecebidasAgente2.get(0).getCarta(),
+                                listaCartasRecebidasAgente2.get(1).getCarta(), listaCartasRecebidasAgente2.get(2).getCarta(),
                                 listaCartasJogadasAgente1.get(0).getCarta(), listaCartasJogadasAgente1.get(1).getCarta()));
 
                         //#Blefe4 Oponente tem mão fraca e pede truco para agente fugir
@@ -3306,8 +3401,10 @@ public class ControlaRodadaAuto {
 
     }
 
-    public TrucoDescription getDescriptionAtibutosBlefe() {
-        TrucoDescription trucoDescription = new TrucoDescription();
+    public TrucoDescription getDescriptionAtibutosBlefe(TrucoDescription currentQuery) {
+
+        TrucoDescription trucoDescription = currentQuery;
+        //TrucoDescription trucoDescription = new TrucoDescription();
 
         trucoDescription.setBluff1Success(controlaPartidaAuto.getCountBluff1Success());
         trucoDescription.setBluff2Success(controlaPartidaAuto.getCountBluff2Success());
@@ -3524,7 +3621,11 @@ public class ControlaRodadaAuto {
         NovoDescription1.setUtilCarta(utilCarta ? 1 : 0);
         NovoDescription1.setUtilTruco(utilTruco ? 1 : 0);
         NovoDescription1.setUtilEnvido(utilEnvido ? 1 : 0);
-        NovoDescription1.setHasDeception(hasDeception ? 1 : 0);
+        if (isResponseIsBluff()) {
+            NovoDescription1.setHasDeception(1);
+        } else {
+            NovoDescription1.setHasDeception(hasDeception ? 1 : 0);
+        }
 
         NovoDescription1.setBluff1Failure(controlaPartidaAuto.getCountBluff1Failure());
         NovoDescription1.setBluff1Success(controlaPartidaAuto.getCountBluff1Success());
@@ -4615,6 +4716,14 @@ public class ControlaRodadaAuto {
         this.responseActiveLearning = responseActiveLearning;
     }
 
+    public boolean isResponseIsBluff() {
+        return responseIsBluff;
+    }
+
+    public void setResponseIsBluff(boolean responseIsBluff) {
+        this.responseIsBluff = responseIsBluff;
+    }
+
     ////Active Learning
 
     //moveType: 0 Flor/ 1 Envido/ 2 Truco/ 3 Play Card
@@ -4723,10 +4832,20 @@ public class ControlaRodadaAuto {
 
         gameState.setProb(prob);
 
-        gameState.setCasoMaisSimilar( (TrucoDescription) casoMaisSimilar.get_case().getDescription());
+        if (casoMaisSimilar != null) {
 
-        gameState.setSimilarity(casoMaisSimilar.getEval());
-        gameState.setCaseId(((TrucoDescription) casoMaisSimilar.get_case().getDescription()).getId());
+            try {
+                gameState.setCasoMaisSimilar( (TrucoDescription) casoMaisSimilar.get_case().getDescription());
+                gameState.setSimilarity(new BigDecimal(casoMaisSimilar.getEval())
+                        .setScale(2, RoundingMode.HALF_UP).doubleValue());
+                gameState.setCaseId(((TrucoDescription) casoMaisSimilar.get_case().getDescription()).getId());
+            } catch (Exception e) {
+                System.out.println(e);
+                gameState.setCasoMaisSimilar(new TrucoDescription());
+                gameState.setSimilarity(-1);
+                gameState.setCaseId(-1);
+            }
+        }
 
         return gameState;
     }
@@ -5070,13 +5189,19 @@ public class ControlaRodadaAuto {
 
     public String getTypeCarta(String carta) {
 
-        if (carta.equals(listaCartasRecebidasAgente1.get(0).getCarta())) {
-            return "HIGH_CARD";
-        } else if (carta.equals(listaCartasRecebidasAgente1.get(1).getCarta())) {
-            return "MEDIUM_CARD";
-        } else {
+        try {
+            if (carta.equals(listaCartasRecebidasAgente1.get(0).getCarta())) {
+                return "HIGH_CARD";
+            } else if (carta.equals(listaCartasRecebidasAgente1.get(1).getCarta())) {
+                return "MEDIUM_CARD";
+            } else {
+                return "LOW_CARD";
+            }
+        } catch (Exception e) {
+            System.out.println(e);
             return "LOW_CARD";
         }
+
     }
 
     public Decision createDefaultDecision(int typeDecision, int typeAction) {
@@ -5154,10 +5279,11 @@ public class ControlaRodadaAuto {
         Iterator iterator = casosRecuperadosPadrao.iterator();
         if (iterator.hasNext()) {
             RetrievalResult r = (RetrievalResult) iterator.next();
-            System.out.println("[SIMILARIDADE]-> " + r.getEval() + "[CaseId]-> " + r.get_case().getDescription().getIdAttribute());
+            System.out.println("[SIMILARIDADE]-> " + r.getEval() +
+                    " [CaseId]-> " + ((TrucoDescription) r.get_case().getDescription()).getId());
             casoMaisSimilar = r;
             //casoMaisSimilar = (cbr.cbrDescriptions.TrucoDescription) r.get_case().getDescription();
-            System.out.println(r.get_case().getDescription().toString());
+            // System.out.println(r.get_case().getDescription().toString());
         }
 
         return casoMaisSimilar;
